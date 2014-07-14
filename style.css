@@ -1,0 +1,52 @@
+@import url("d3/lib/jquery-ui/jquery-ui.css");
+/* some colors */
+@font-face {
+  font-family: 'Entypo';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Entypo"), url(Entypo/entypo.woff) format("woff"); }
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+body {
+  background-color: #333;
+  font-size: 16px;
+  font-family: 'Bitter';
+  font-weight: 400;
+  color: #E8E8E8;
+  /* come on iOS webkit, be a good citizen! */
+  -webkit-text-size-adjust: 100%; }
+
+div.container {
+  width: 460px;
+  margin-left: 1em;
+  /*	margin: 0px auto 0px auto;*/ }
+
+h1, h2 {
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  color: #E8E8E8; }
+
+h2 {
+  margin-top: 1em; }
+
+p {
+  color: #E8E8E8;
+  margin-top: 1em; }
+
+hr {
+  height: 0.5em;
+  background-color: #E8E8E8; }
+
+.digitalIndicator {
+  border-radius: 0.2em;
+  margin-bottom: 0.2em;
+  padding: 0.2em;
+  width: 100px;
+  background-color: #555555; }
