@@ -1,5 +1,5 @@
-# Space Walk Telemetry
+# Space Walk Inpu
 
-A telemetry plugin for Space Walk.
+A Space Walk plugin collection to analyse user input during playtesting sessions.
 
-Find it online at http://simonwallner.github.io/space-walk-telemetry/
+Find it online at http://simonwallner.github.io/space-walk-input/
