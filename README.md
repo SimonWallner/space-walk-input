@@ -1,4 +1,4 @@
-# Space Walk Inpu
+# Space Walk Input
 
 A Space Walk plugin collection to analyse user input during playtesting sessions.
 
