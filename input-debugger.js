@@ -62,6 +62,20 @@ libsw.onMessage = function(data) {
 
 			// store value
 			storedValues[payload.name] = payload;
+		} else { // analog values, i.e. axes
+			var selection = d3.select('#analog').selectAll('#' + payload.name).data([payload]);
+			var div = selection.enter().append('div')
+				.attr('id', payload.name)
+				.text(payload.name);
+
+			div.append('hr');
+			div.append('span')
+				.text('•');
+
+			var margin = map(payload.range.min, payload.range.max, 0, 300, payload.value);
+			selection.select('span')
+				.style('margin-left', margin + 'px');
+
 		}
 	}
 }
@@ -79,4 +93,10 @@ function round(value, decimals) {
 
 function last(arr) {
 	return arr[arr.length-1];
+}
+
+// map value, from [a, b] to [r, s]
+function map(a, b, r, s, value) {
+	var t = (value - a) / (b -a);
+	return r + (s - r) * t;
 }
