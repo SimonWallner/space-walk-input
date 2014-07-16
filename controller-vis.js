@@ -60,19 +60,21 @@ libsw.onMessage = function(data) {
 		var payload = data.payload;
 		if (payload.type === 'digital') { // aka button press/release
 
+			// for obvious reasons (name spaces and such) there is no way to 
+			// directly access things iside the external svg
+			var svg = d3.select(document.getElementById('controller-svg').contentDocument);
 
 			if (storedValues[payload.name]) {
 				// on --> off transition
 				if (storedValues[payload.name].value === 1 && payload.value === 0) {
-					d3.select('#input-' + mapping.xbox360[payload.name])
-						.style('background-color', '');
+					svg.selectAll('#' + mapping.xbox360[payload.name] + ' path')
+						.style('fill', '');
 				}
 
 				// off --> on transition
 				if (storedValues[payload.name].value === 0 && payload.value === 1) {
-					d3.select('#input-' + mapping.xbox360[payload.name])
-						.style('background-color', colors.red)
-
+					svg.selectAll('#' + mapping.xbox360[payload.name] + ' path')
+						.style('fill', colors.red);
 				}
 			}
 
