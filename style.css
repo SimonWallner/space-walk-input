@@ -17,10 +17,9 @@ body {
   /* come on iOS webkit, be a good citizen! */
   -webkit-text-size-adjust: 100%; }
 
-div.container {
-  width: 460px;
+#container {
   margin-left: 1em;
-  /*	margin: 0px auto 0px auto;*/ }
+  padding-bottom: 1em; }
 
 h1, h2 {
   font-size: 3.5em;
@@ -44,17 +43,113 @@ hr {
   width: 100px;
   background-color: #555555; }
 
-#analog div {
-  margin-top: 0.5em;
-  height: 30px; }
-  #analog div hr {
+#digital {
+  width: 330px;
+  float: left; }
+
+#analog {
+  width: 330px;
+  margin-left: 330px; }
+  #analog div {
     margin-top: 0.5em;
-    margin-bottom: 0px;
-    height: 0.1em;
-    width: 300px; }
-  #analog div span {
-    position: relative;
-    top: -30px;
-    left: -10px;
-    color: #e25454;
-    font-size: 3em; }
+    height: 30px; }
+    #analog div hr {
+      margin-top: 0.5em;
+      margin-bottom: 0px;
+      height: 0.1em;
+      width: 300px; }
+    #analog div span {
+      position: relative;
+      top: -30px;
+      left: -10px;
+      color: #e25454;
+      font-size: 3em; }
+
+.controllerIndicator {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #e25454; }
+
+.stickIndicator {
+  border-radius: 10px;
+  background-color: #8885ed;
+  width: 5px;
+  height: 5px; }
+
+#input-L1 {
+  top: 190px;
+  left: 227px; }
+
+#input-L2 {
+  top: 220px;
+  left: 227px; }
+
+#input-L3 {
+  top: 430px;
+  left: 310px; }
+
+#input-R1 {
+  top: 190px;
+  left: 555px; }
+
+#input-R2 {
+  top: 220px;
+  left: 555px; }
+
+#input-R3 {
+  top: 430px;
+  left: 470px; }
+
+#input-Dpad-left {
+  top: 350px;
+  left: 190px; }
+
+#input-Dpad-right {
+  top: 350px;
+  left: 260px; }
+
+#input-Dpad-up {
+  top: 320px;
+  left: 227px; }
+
+#input-Dpad-down {
+  top: 380px;
+  left: 227px; }
+
+#input-circle {
+  top: 350px;
+  left: 600px; }
+
+#input-square {
+  top: 350px;
+  left: 510px; }
+
+#input-triangle {
+  top: 320px;
+  left: 555px; }
+
+#input-cross {
+  top: 380px;
+  left: 555px; }
+
+#input-select {
+  top: 350px;
+  left: 340px; }
+
+#input-start {
+  top: 350px;
+  left: 430px; }
+
+#input-special {
+  top: 375px;
+  left: 391px; }
+
+#input-LS {
+  top: 430px;
+  left: 310px; }
+
+#input-RS {
+  top: 430px;
+  left: 470px; }
