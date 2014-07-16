@@ -70,20 +70,20 @@ hr {
   width: 20px;
   height: 20px;
   border-radius: 5px;
-  background-color: #e25454; }
+  background-color: #8885ed; }
 
 .stickIndicator {
   border-radius: 10px;
-  background-color: #8885ed;
-  width: 5px;
-  height: 5px; }
+  background-color: #5dd1a4;
+  width: 10px;
+  height: 10px; }
 
 #input-L1 {
-  top: 190px;
+  top: 220px;
   left: 227px; }
 
 #input-L2 {
-  top: 220px;
+  top: 190px;
   left: 227px; }
 
 #input-L3 {
@@ -91,11 +91,11 @@ hr {
   left: 310px; }
 
 #input-R1 {
-  top: 190px;
+  top: 220px;
   left: 555px; }
 
 #input-R2 {
-  top: 220px;
+  top: 190px;
   left: 555px; }
 
 #input-R3 {

@@ -104,14 +104,14 @@ hr {
 	width: 20px;
 	height: 20px;
 	border-radius: 5px;
-	background-color: $red;
+	background-color: $lavender;
 }
 
 .stickIndicator {
 	border-radius: 10px;
-	background-color: $lavender;
-	width: 5px;
-	height: 5px;
+	background-color: $turquise;
+	width: 10px;
+	height: 10px;
 }
 
 $horizontalCenter: 350px;
@@ -119,12 +119,12 @@ $leftVerticalCenter: 227px;
 $rightVerticalCenter: 555px;
 
 #input-L1 {
-	top: 190px;
+	top: 220px;
 	left: $leftVerticalCenter;
 }
 
 #input-L2 {
-	top: 220px;
+	top: 190px;
 	left: $leftVerticalCenter;
 }
 
@@ -134,12 +134,12 @@ $rightVerticalCenter: 555px;
 }
 
 #input-R1 {
-	top: 190px;
+	top: 220px;
 	left: $rightVerticalCenter;
 }
 
 #input-R2 {
-	top: 220px;
+	top: 190px;
 	left: $rightVerticalCenter;
 }
 

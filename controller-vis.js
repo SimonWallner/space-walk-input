@@ -18,64 +18,70 @@ var colors = {
 	red: '#e25454'
 }
 
+var mapping = {
+	xbox360: {
+		'button-0': 'cross',
+		'button-1': 'circle',
+		'button-2': 'square',
+		'button-3': 'triangle',
+
+		'button-4': 'L1',
+		'button-5': 'R1',
+		'button-6': 'L3',
+		'button-7': 'R3',
+
+		'button-11': 'Dpad-up',
+		'button-12': 'Dpad-down',
+		'button-13': 'Dpad-left',
+		'button-14': 'Dpad-right',
+
+		'button-8': 'start',
+		'button-9': 'select',
+		'button-10': 'special'
+	}
+}
+
+var analogMapping = {
+	xbox360: {
+		'axis-0': {id: 'LS', property: 'margin-left'},
+		'axis-1': {id: 'LS', property: 'margin-top'},
+
+		'axis-3': {id: 'RS', property: 'margin-left'},
+		'axis-4': {id: 'RS', property: 'margin-top'},
+
+		'axis-2': {id: 'L2', property: 'margin-top'},
+		'axis-5': {id: 'R2', property: 'margin-top'}
+	}
+}
+
 
 libsw.onMessage = function(data) {
 	if (data.type === 'input') {
 		var payload = data.payload;
 		if (payload.type === 'digital') { // aka button press/release
 
-			var digitalDiv = d3.select('#digital');
-			var selection = digitalDiv.selectAll('#' + payload.name).data([payload]);
-			selection.enter()
-				.append('div')
-				.attr('id', function(d) { return d.name; })
-				.attr('class', 'digitalIndicator')
-				.text(function(d) { return d.name; })
 
 			if (storedValues[payload.name]) {
 				// on --> off transition
 				if (storedValues[payload.name].value === 1 && payload.value === 0) {
-					selection
-						.style('background-color', colors.lavender)
-						.transition()
-							.duration(500)
-							.style('width', '100px');
+					d3.select('#input-' + mapping.xbox360[payload.name])
+						.style('background-color', '');
 				}
 
 				// off --> on transition
 				if (storedValues[payload.name].value === 0 && payload.value === 1) {
-					selection
+					d3.select('#input-' + mapping.xbox360[payload.name])
 						.style('background-color', colors.red)
-						.transition()
-							.duration(500)
-							.style('background-color', colors.lavender);
 
 				}
-			}
-
-			if (payload.value === 1) {
-				selection.transition()
-					.duration(0)
-					.style('width', '300px');
 			}
 
 
 			// store value
 			storedValues[payload.name] = payload;
-		} else { // analog values, i.e. axes
-			var selection = d3.select('#analog').selectAll('#' + payload.name).data([payload]);
-			var div = selection.enter().append('div')
-				.attr('id', payload.name)
-				.text(payload.name);
-
-			div.append('hr');
-			div.append('span')
-				.text('•');
-
-			var margin = map(payload.range.min, payload.range.max, 0, 300, payload.value);
-			selection.select('span')
-				.style('margin-left', margin + 'px');
-
+		} else if (payload.type === 'analog') { // aka axis
+			d3.select('#input-' + analogMapping.xbox360[payload.name].id)
+				.style(analogMapping.xbox360[payload.name].property, map(-1, 1, -20, 20, payload.value) + 'px');
 		}
 	}
 }
