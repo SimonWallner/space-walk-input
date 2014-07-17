@@ -31,6 +31,21 @@ p {
   color: #E8E8E8;
   margin-top: 1em; }
 
+.button {
+  border-radius: 0.3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  background-color: #1f6064;
+  margin-right: 0.5em; }
+
+.interactive {
+  cursor: pointer; }
+
+.active {
+  background-color: #3fc0c9; }
+
 hr {
   height: 0.5em;
   background-color: #E8E8E8;
@@ -64,92 +79,3 @@ hr {
       left: -10px;
       color: #e25454;
       font-size: 3em; }
-
-.controllerIndicator {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  background-color: #8885ed; }
-
-.stickIndicator {
-  border-radius: 10px;
-  background-color: #5dd1a4;
-  width: 10px;
-  height: 10px; }
-
-#input-L1 {
-  top: 220px;
-  left: 227px; }
-
-#input-L2 {
-  top: 190px;
-  left: 227px; }
-
-#input-L3 {
-  top: 430px;
-  left: 310px; }
-
-#input-R1 {
-  top: 220px;
-  left: 555px; }
-
-#input-R2 {
-  top: 190px;
-  left: 555px; }
-
-#input-R3 {
-  top: 430px;
-  left: 470px; }
-
-#input-Dpad-left {
-  top: 350px;
-  left: 190px; }
-
-#input-Dpad-right {
-  top: 350px;
-  left: 260px; }
-
-#input-Dpad-up {
-  top: 320px;
-  left: 227px; }
-
-#input-Dpad-down {
-  top: 380px;
-  left: 227px; }
-
-#input-circle {
-  top: 350px;
-  left: 600px; }
-
-#input-square {
-  top: 350px;
-  left: 510px; }
-
-#input-triangle {
-  top: 320px;
-  left: 555px; }
-
-#input-cross {
-  top: 380px;
-  left: 555px; }
-
-#input-select {
-  top: 350px;
-  left: 340px; }
-
-#input-start {
-  top: 350px;
-  left: 430px; }
-
-#input-special {
-  top: 375px;
-  left: 391px; }
-
-#input-LS {
-  top: 430px;
-  left: 310px; }
-
-#input-RS {
-  top: 430px;
-  left: 470px; }

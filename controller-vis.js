@@ -84,7 +84,7 @@ var mapping = {
 	}
 }
 
-currentMapping = mapping.ps3;
+currentMapping = mapping.xbox360;
 
 var sticks = {
 	LS: {
@@ -108,17 +108,23 @@ libsw.onMessage = function(data) {
 
 		if (payload.type === 'digital') { // aka button press/release
 
-			if (storedValues[payload.name]) {
-				// on --> off transition
-				if (storedValues[payload.name].value === 1 && payload.value === 0) {
-					svg.selectAll('#' + currentMapping.digital[payload.name] + ' path')
-						.style('fill', '');
-				}
+			var mapping = currentMapping.digital[payload.name];
+			if (mapping) {
 
-				// off --> on transition
-				if (storedValues[payload.name].value === 0 && payload.value === 1) {
-					svg.selectAll('#' + currentMapping.digital[payload.name] + ' path')
-						.style('fill', colors.red);
+				if (storedValues[payload.name]) {
+					// on --> off transition
+					if (storedValues[payload.name].value === 1 && payload.value === 0) {
+						svg.selectAll('#' + mapping + ' path')
+							.style('fill', '')
+							.style('opacity', 1); // workaround for LR2
+					}
+
+					// off --> on transition
+					if (storedValues[payload.name].value === 0 && payload.value === 1) {
+						svg.selectAll('#' + mapping + ' path')
+							.style('fill', colors.red)
+							.style('opacity', 1); // workaround for LR2
+					}
 				}
 			}
 
@@ -127,19 +133,21 @@ libsw.onMessage = function(data) {
 			storedValues[payload.name] = payload;
 		} else if (payload.type === 'analog') { // aka axis
 			var mapping = currentMapping.analog[payload.name]
-			if (mapping.id === 'LS' || mapping.id === 'RS') {
-				sticks[mapping.id][mapping.property] = payload.value;
+			if (mapping) {
+				if (mapping.id === 'LS' || mapping.id === 'RS') {
+					sticks[mapping.id][mapping.property] = payload.value;
 
-				var x = map(-1, 1, -15, 15, sticks[mapping.id].x);
-				var y = map(-1, 1, -15, 15, sticks[mapping.id].y);
+					var x = map(-1, 1, -15, 15, sticks[mapping.id].x);
+					var y = map(-1, 1, -15, 15, sticks[mapping.id].y);
 
-				svg.select('#' + mapping.id)
-					.attr('transform', 'translate(' + x + ', ' + y + ')');
-			} else if(mapping.id === 'L2' || mapping.id === 'R2') {
+					svg.select('#' + mapping.id)
+						.attr('transform', 'translate(' + x + ', ' + y + ')');
+				} else if(mapping.id === 'L2' || mapping.id === 'R2') {
 
-				svg.selectAll('#' + mapping.id + ' path')
-					.style('fill', colors.red)
-					.style('opacity', payload.value);
+					svg.selectAll('#' + mapping.id + ' path')
+						.style('fill', colors.red)
+						.style('opacity', payload.value);
+				}
 			}
 		}
 	}
@@ -148,6 +156,22 @@ libsw.onMessage = function(data) {
 libsw.onSessionStarted = function() {
 
 }
+
+$(document).ready(function() {
+	$('#mapping-xbox').click(function() {
+		currentMapping = mapping.xbox360;
+
+		$(this).addClass('active');
+		$('#mapping-ps3').removeClass('active');
+	})
+
+	$('#mapping-ps3').click(function() {
+		currentMapping = mapping.ps3;
+
+		$(this).addClass('active');
+		$('#mapping-xbox').removeClass('active');
+	})
+})
 
 // ================================= util ================================
 function round(value, decimals) {

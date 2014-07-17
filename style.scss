@@ -56,6 +56,26 @@ p {
 	margin-top: 1em;
 }
 
+.button {
+	border-radius: 0.3em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	background-color: $blue * 0.5;
+	margin-right: 0.5em;
+}
+
+.interactive {
+	cursor: pointer;
+}
+
+.active {
+	background-color: $blue;
+}
+
+// === input debugger stuff ===
+
 hr {
 	height: 0.5em;
 	background-color: #E8E8E8;
@@ -99,116 +119,4 @@ hr {
 
 // === controller vis stuff ===
 
-.controllerIndicator {
-	position: fixed;
-	width: 20px;
-	height: 20px;
-	border-radius: 5px;
-	background-color: $lavender;
-}
 
-.stickIndicator {
-	border-radius: 10px;
-	background-color: $turquise;
-	width: 10px;
-	height: 10px;
-}
-
-$horizontalCenter: 350px;
-$leftVerticalCenter: 227px;
-$rightVerticalCenter: 555px;
-
-#input-L1 {
-	top: 220px;
-	left: $leftVerticalCenter;
-}
-
-#input-L2 {
-	top: 190px;
-	left: $leftVerticalCenter;
-}
-
-#input-L3 {
-	top: 430px;
-	left: 310px;
-}
-
-#input-R1 {
-	top: 220px;
-	left: $rightVerticalCenter;
-}
-
-#input-R2 {
-	top: 190px;
-	left: $rightVerticalCenter;
-}
-
-#input-R3 {
-	top: 430px;
-	left: 470px;
-}
-
-#input-Dpad-left {
-	top: $horizontalCenter;
-	left: 190px;
-}
-
-#input-Dpad-right {
-	top: $horizontalCenter;
-	left: 260px;
-}
-
-#input-Dpad-up {
-	top: 320px;
-	left: $leftVerticalCenter;
-}
-
-#input-Dpad-down {
-	top: 380px;
-	left: $leftVerticalCenter;
-}
-
-#input-circle {
-	top: $horizontalCenter;
-	left: 600px;
-}
-
-#input-square {
-	top: $horizontalCenter;
-	left: 510px;
-}
-
-#input-triangle {
-	top: 320px;
-	left: $rightVerticalCenter;
-}
-
-#input-cross {
-	top: 380px;
-	left: $rightVerticalCenter;
-}
-
-#input-select {
-	top: $horizontalCenter;
-	left: 340px;
-}
-
-#input-start {
-	top: $horizontalCenter;
-	left: 430px;
-}
-
-#input-special {
-	top: $horizontalCenter + 25px;
-	left: $leftVerticalCenter + ($rightVerticalCenter - $leftVerticalCenter) / 2;
-}
-
-#input-LS {
-	top: 430px;
-	left: 310px;
-}
-
-#input-RS {
-	top: 430px;
-	left: 470px;
-}
