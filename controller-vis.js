@@ -20,37 +20,80 @@ var colors = {
 
 var mapping = {
 	xbox360: {
-		'button-0': 'cross',
-		'button-1': 'circle',
-		'button-2': 'square',
-		'button-3': 'triangle',
+		digital: {
+			'button-0': 'cross',
+			'button-1': 'circle',
+			'button-2': 'square',
+			'button-3': 'triangle',
 
-		'button-4': 'L1',
-		'button-5': 'R1',
-		'button-6': 'L3',
-		'button-7': 'R3',
+			'button-4': 'L1',
+			'button-5': 'R1',
+			'button-6': 'L3',
+			'button-7': 'R3',
 
-		'button-11': 'Dpad-up',
-		'button-12': 'Dpad-down',
-		'button-13': 'Dpad-left',
-		'button-14': 'Dpad-right',
+			'button-11': 'Dpad-up',
+			'button-12': 'Dpad-down',
+			'button-13': 'Dpad-left',
+			'button-14': 'Dpad-right',
 
-		'button-8': 'start',
-		'button-9': 'select',
-		'button-10': 'special'
+			'button-8': 'start',
+			'button-9': 'select',
+			'button-10': 'special'
+		},
+		analog: {
+			'axis-0': {id: 'LS', property: 'x'},
+			'axis-1': {id: 'LS', property: 'y'},
+
+			'axis-3': {id: 'RS', property: 'x'},
+			'axis-4': {id: 'RS', property: 'y'},
+
+			'axis-2': {id: 'L2'},
+			'axis-5': {id: 'R2'}
+		}
+	},
+	ps3: {
+		digital: {
+			'button-14': 'cross',
+			'button-13': 'circle',
+			'button-15': 'square',
+			'button-12': 'triangle',
+
+			'button-10': 'L1',
+			'button-11': 'R1',
+			'button-8': 'L2',
+			'button-9': 'R2',
+			'button-1': 'L3',
+			'button-2': 'R3',
+
+			'button-4': 'Dpad-up',
+			'button-6': 'Dpad-down',
+			'button-7': 'Dpad-left',
+			'button-5': 'Dpad-right',
+
+			'button-3': 'start',
+			'button-0': 'select',
+			'button-16': 'special'
+		},
+		analog: {
+			'axis-0': {id: 'LS', property: 'x'},
+			'axis-1': {id: 'LS', property: 'y'},
+
+			'axis-2': {id: 'RS', property: 'x'},
+			'axis-3': {id: 'RS', property: 'y'},
+		}
 	}
 }
 
-var analogMapping = {
-	xbox360: {
-		'axis-0': {id: 'LS', property: 'margin-left'},
-		'axis-1': {id: 'LS', property: 'margin-top'},
+currentMapping = mapping.ps3;
 
-		'axis-3': {id: 'RS', property: 'margin-left'},
-		'axis-4': {id: 'RS', property: 'margin-top'},
-
-		'axis-2': {id: 'L2', property: 'margin-top'},
-		'axis-5': {id: 'R2', property: 'margin-top'}
+var sticks = {
+	LS: {
+		x: 0,
+		y: 0
+	},
+	RS: {
+		x: 0,
+		y: 0
 	}
 }
 
@@ -58,22 +101,23 @@ var analogMapping = {
 libsw.onMessage = function(data) {
 	if (data.type === 'input') {
 		var payload = data.payload;
-		if (payload.type === 'digital') { // aka button press/release
+		
+		// for obvious reasons (name spaces and such) there is no way to 
+		// directly access things iside the external svg
+		var svg = d3.select(document.getElementById('controller-svg').contentDocument);
 
-			// for obvious reasons (name spaces and such) there is no way to 
-			// directly access things iside the external svg
-			var svg = d3.select(document.getElementById('controller-svg').contentDocument);
+		if (payload.type === 'digital') { // aka button press/release
 
 			if (storedValues[payload.name]) {
 				// on --> off transition
 				if (storedValues[payload.name].value === 1 && payload.value === 0) {
-					svg.selectAll('#' + mapping.xbox360[payload.name] + ' path')
+					svg.selectAll('#' + currentMapping.digital[payload.name] + ' path')
 						.style('fill', '');
 				}
 
 				// off --> on transition
 				if (storedValues[payload.name].value === 0 && payload.value === 1) {
-					svg.selectAll('#' + mapping.xbox360[payload.name] + ' path')
+					svg.selectAll('#' + currentMapping.digital[payload.name] + ' path')
 						.style('fill', colors.red);
 				}
 			}
@@ -82,8 +126,21 @@ libsw.onMessage = function(data) {
 			// store value
 			storedValues[payload.name] = payload;
 		} else if (payload.type === 'analog') { // aka axis
-			d3.select('#input-' + analogMapping.xbox360[payload.name].id)
-				.style(analogMapping.xbox360[payload.name].property, map(-1, 1, -20, 20, payload.value) + 'px');
+			var mapping = currentMapping.analog[payload.name]
+			if (mapping.id === 'LS' || mapping.id === 'RS') {
+				sticks[mapping.id][mapping.property] = payload.value;
+
+				var x = map(-1, 1, -15, 15, sticks[mapping.id].x);
+				var y = map(-1, 1, -15, 15, sticks[mapping.id].y);
+
+				svg.select('#' + mapping.id)
+					.attr('transform', 'translate(' + x + ', ' + y + ')');
+			} else if(mapping.id === 'L2' || mapping.id === 'R2') {
+
+				svg.selectAll('#' + mapping.id + ' path')
+					.style('fill', colors.red)
+					.style('opacity', payload.value);
+			}
 		}
 	}
 }

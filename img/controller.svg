@@ -5,83 +5,20 @@
 	 height="488px" viewBox="0 0 628 488" enable-background="new 0 0 628 488" xml:space="preserve">
 <g id="back">
 	<rect x="-16" y="-10.667" fill="#353535" width="649.333" height="509.333"/>
+	<g>
+		<path fill="#4F4F4F" d="M326.333,12.238c-2.199-0.039-4.035,1.729-4.08,3.928l-2.062,101.71c-0.045,2.199,1.615,4.601,3.688,5.336
+			l86.462,30.661c2.073,0.735,4.574-0.273,5.559-2.241l2.422-4.845c0.984-1.968,3.507-4.115,5.607-4.771l3.029-0.947
+			c2.101-0.656,5.618-1.193,7.818-1.193h10.667c2.2,0,4.096-1.797,4.213-3.994l6.241-117.346c0.117-2.197-1.587-4.026-3.786-4.065
+			L326.333,12.238z"/>
+	</g>
 </g>
 <g id="interactive">
 	<g id="body">
 		<g>
-			<g>
-				<g>
-					<path fill="#4F4F4F" d="M315.443,327.208l0.001,144.331c0,3.118-2.551,5.656-5.669,5.641l-121.328-0.611
-						c-3.118-0.016-4.754-2.41-3.636-5.32l41.267-107.414c1.118-2.91,4.412-4.371,7.32-3.245l10.093,3.906
-						c2.908,1.126,7.835,1.926,10.95,1.777l16.674-0.795c3.115-0.148,7.851-1.582,10.524-3.187l10.277-6.166
-						c2.674-1.604,5.415-5.407,6.091-8.451l4.103-18.466"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M331.778,11.991c-3.117-0.064-5.807,2.431-5.977,5.544l-5.383,98.679
-						c-0.17,3.113,2.096,6.513,5.034,7.556l83.314,29.545c2.939,1.042,6.484-0.387,7.879-3.176l0.93-1.858
-						c1.395-2.789,4.935-5.821,7.868-6.737s7.884-1.667,11.002-1.667h7.329c3.118,0,5.805-2.547,5.97-5.661l6.065-114.012
-						c0.165-3.114-2.25-5.713-5.367-5.777L331.778,11.991z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M459.594,139.974c-3.017-0.787-5.348-3.979-5.18-7.092L460.47,20.87
-						c0.168-3.114,2.856-5.682,5.975-5.708l149.995-1.239c3.118-0.026,5.654,2.504,5.636,5.623l-0.599,101.993
-						c-0.019,3.118-2.331,6.777-5.14,8.131l-119.788,57.744c-2.809,1.354-6.29,0.202-7.737-2.56l-2.072-3.956
-						c-1.447-2.762-3.621-7.373-4.831-10.247l-0.933-2.217c-1.21-2.874-3.4-6.875-4.867-8.891c-1.466-2.016-3.399-6.109-4.295-9.096
-						l-0.742-2.474c-0.896-2.987-4.098-6.074-7.114-6.861L459.594,139.974z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M344.846,141.404c0.695-3.04,3.634-4.584,6.531-3.431l51.465,20.475
-						c2.897,1.153,5.072,4.639,4.833,7.748l-0.465,6.029c-0.239,3.109-1.185,7.152-2.102,8.985
-						c-0.916,1.833-4.216,3.258-7.333,3.167l-56.666-1.667c-3.117-0.091-5.099-2.653-4.403-5.693L344.846,141.404z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M303.754,139.969c-0.904-2.984,0.901-5.244,4.011-5.022l26.023,1.859
-						c3.11,0.222,5.09,2.892,4.398,5.932l-7.486,32.943c-0.691,3.041-3.763,5.051-6.826,4.467l-2.861-0.545
-						c-3.063-0.583-6.309-3.502-7.213-6.487L303.754,139.969z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M318.776,328.544l1.925,143.661c0.042,3.118,2.627,5.656,5.745,5.641l122.662-0.609
-						c3.118-0.016,4.752-2.409,3.632-5.319l-40.593-105.416c-1.12-2.91-4.416-4.37-7.324-3.244l-10.093,3.906
-						c-2.908,1.126-7.835,1.926-10.95,1.777l-16.674-0.795c-3.115-0.148-7.851-1.582-10.524-3.187l-10.277-6.166
-						c-2.674-1.604-5.415-5.407-6.091-8.451l-4.104-18.466"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M417.697,362.412c-1.239-2.861-0.956-7.398,0.63-10.083l2.899-4.906
-						c1.586-2.685,5.057-3.544,7.712-1.909l7.677,4.725c2.655,1.635,7.19,3.935,10.078,5.11l7.5,3.055
-						c2.888,1.176,6.899,4.085,8.915,6.464l92.67,109.35c2.016,2.379,1.114,4.288-2.004,4.243l-80.661-1.17
-						c-3.118-0.045-6.684-2.423-7.923-5.284L417.697,362.412z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M497.143,199.028c-1.302-2.833-0.057-6.233,2.767-7.556l116.4-54.526
-						c2.823-1.323,5.155,0.146,5.182,3.264l0.57,67.329c0.026,3.118-2.381,6.449-5.351,7.402l-97.203,31.203
-						c-2.97,0.953-6.069-0.729-6.89-3.737l-5.018-18.395c-0.82-3.008-2.557-7.788-3.858-10.621L497.143,199.028z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M514.962,261.48c-0.469-3.082,1.585-6.356,4.564-7.276l97.166-29.991
-						c2.979-0.919,5.417,0.879,5.417,3.998v111.329c0,3.118-2.51,5.211-5.577,4.651l-94.846-17.297
-						c-3.067-0.56-5.404-3.562-5.193-6.674l1.899-28.023c0.211-3.111,0-8.179-0.47-11.261L514.962,261.48z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M511.844,337.468c0.513-3.075,3.434-5.095,6.492-4.486l96.213,19.121
-						c3.059,0.608,5.561,3.656,5.561,6.774v114.662c0,3.118-2.551,5.635-5.669,5.593l-38.662-0.516
-						c-3.118-0.042-7.35-1.995-9.404-4.341l-91.196-104.135c-2.055-2.346-1.38-5.246,1.498-6.445l5.533-2.305
-						c2.878-1.199,7.664-2.954,10.636-3.9l3.862-1.229c2.972-0.946,7.011-3.7,8.978-6.12l1.516-1.865
-						c1.967-2.42,3.994-6.917,4.507-9.992L511.844,337.468z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M309.107,11.237c3.118-0.016,5.654,2.523,5.636,5.641l-0.6,100.661
-						c-0.019,3.118-2.459,6.46-5.424,7.426l-79.221,25.82c-2.964,0.966-6.531-0.525-7.925-3.314l-0.93-1.858
-						c-1.394-2.789-4.935-5.821-7.868-6.738s-7.884-1.667-11.002-1.667h-7.328c-3.118,0-5.805-2.547-5.971-5.661L182.41,17.537
-						c-0.166-3.114,2.25-5.674,5.368-5.689L309.107,11.237z"/>
-				</g>
-				<g>
-					<path fill="#4F4F4F" d="M178.625,137.307c3.017-0.787,5.348-3.979,5.18-7.092L177.75,18.204
-						c-0.168-3.114-2.857-5.701-5.975-5.75L13.112,9.964c-3.118-0.049-5.668,2.462-5.668,5.581v100.662
-						c0,3.118,2.31,6.752,5.133,8.076l129.067,60.52c2.823,1.324,6.317,0.147,7.764-2.615l2.072-3.956
-						c1.447-2.762,3.621-7.373,4.831-10.247l0.933-2.216c1.21-2.874,3.4-6.875,4.867-8.892s3.399-6.11,4.295-9.097l0.742-2.473
-						c0.896-2.987,4.098-6.074,7.115-6.861L178.625,137.307z"/>
-				</g>
-			</g>
+			<path fill="#4F4F4F" d="M310.777,11.229c2.2-0.011,3.989,1.78,3.976,3.98l-0.619,104c-0.013,2.2-1.735,4.558-3.827,5.24
+				l-82.395,26.854c-2.092,0.682-4.608-0.37-5.592-2.338l-2.422-4.845c-0.984-1.968-3.507-4.115-5.607-4.771l-3.03-0.947
+				c-2.1-0.656-5.618-1.193-7.818-1.193h-10.667c-2.2,0-4.096-1.797-4.212-3.994L182.321,15.87
+				c-0.117-2.197,1.587-4.003,3.788-4.014L310.777,11.229z"/>
 		</g>
 		<g>
 			<g>
@@ -235,20 +172,17 @@ GRVFNUg0eclSZNGIl18FWOQXhH21Bal1TSR2FnWxZhG63cumN1u5dMbrdy6YQq19teR+tUpTDI55
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M445.031,146.928
 							c-7.062,0-19.732,1.245-22.143,6.124c-2.168,4.391-1.836,10.63-1.836,10.63l47.684,1.132c0,0,0.033-4.817-0.293-6.554
 							c-0.325-1.734-0.596-4.554-2.114-6.289C464.81,150.236,452.455,146.928,445.031,146.928z"/>
-						<path d="M444.355,146.656c-6.223,0-15.074-0.057-20.32,4.664c-2.169,1.951-1.573,5.855-1.465,7.537
-							c4.019-2.104,16.05-3.362,21.311-3.362c5.53,0,15.725,0.597,23.1,5.043c0.674-3.42,0.435-8.152-1.606-9.34
-							C461.083,148.703,453.585,146.656,444.355,146.656"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M444.355,146.656
 							c-6.223,0-15.074-0.057-20.32,4.664c-2.169,1.951-1.573,5.855-1.465,7.537c4.019-2.104,16.05-3.362,21.311-3.362
 							c5.53,0,15.725,0.597,23.1,5.043c0.674-3.42,0.435-8.152-1.606-9.34C461.083,148.703,453.585,146.656,444.355,146.656z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="419.808" y="153.854" width="50.1" height="12.646">
+								<filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="419.808" y="153.854" width="50.1" height="12.645">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="419.808" y="153.854" width="50.1" height="12.646" id="SVGID_11_">
+						<mask maskUnits="userSpaceOnUse" x="419.808" y="153.854" width="50.1" height="12.645" id="SVGID_11_">
 							<g filter="url(#Adobe_OpacityMaskFilter_2_)">
 								<g enable-background="new    ">
 									<g>
@@ -312,9 +246,6 @@ LK5FfM4/CyuRXzOPwsrkUv8AyesrrubelFl6dVt/9Gns76h931WJ+qe3yRjj0pxLdoJQrbYQPKTf
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M195.472,146.928
 							c-7.061,0-19.73,1.245-22.141,6.124c-2.17,4.391-1.837,10.63-1.837,10.63l47.684,1.132c0,0,0.032-4.817-0.293-6.554
 							c-0.325-1.734-0.596-4.554-2.114-6.289C215.252,150.236,202.897,146.928,195.472,146.928z"/>
-						<path d="M194.796,146.656c-6.221,0-15.074-0.057-20.319,4.664c-2.169,1.951-1.574,5.855-1.465,7.537
-							c4.019-2.104,16.05-3.362,21.311-3.362c5.53,0,15.725,0.597,23.099,5.043c0.675-3.42,0.436-8.152-1.606-9.34
-							C211.526,148.703,200.501,146.656,194.796,146.656"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M194.796,146.656
 							c-6.221,0-15.074-0.057-20.319,4.664c-2.169,1.951-1.574,5.855-1.465,7.537c4.019-2.104,16.05-3.362,21.311-3.362
 							c5.53,0,15.725,0.597,23.099,5.043c0.675-3.42,0.436-8.152-1.606-9.34C211.526,148.703,200.501,146.656,194.796,146.656z"/>
@@ -435,9 +366,6 @@ mv4xjAIaAoAAAwAV1y/szIC00gAAAABJRU5ErkJggg==" transform="matrix(0.7744 0 0 0.774
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M420.004,180.564l1.88,1.119
 							c0,0,13.236-4.445,23.464-4.156c10.227,0.289,21.104,3.762,22.083,4.156c1.156,0.465,2.024,0.206,2.024,0.206l0.434-3.139
 							c0,0-14.17-6.429-24.579-5.413c-9.714,0.948-19.676,1.428-25.46,4.395C419.85,178.82,420.004,180.564,420.004,180.564z"/>
-						<path d="M469.89,178.75c0,0,0.723-9.537,0-10.91c-0.869-1.651-9.798-6.381-24.575-6.94c0,0-14.177,0-23.141,4.192
-							c-2.459,0.941-2.169,2.748-2.169,2.748l-0.155,10.4c0,0,10.778-4.682,25.343-4.399
-							C459.758,174.123,469.89,178.75,469.89,178.75"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M469.89,178.75c0,0,0.723-9.537,0-10.91
 							c-0.869-1.651-9.798-6.381-24.575-6.94c0,0-14.177,0-23.141,4.192c-2.459,0.941-2.169,2.748-2.169,2.748l-0.155,10.4
 							c0,0,10.778-4.682,25.343-4.399C459.758,174.123,469.89,178.75,469.89,178.75z"/>
@@ -456,8 +384,6 @@ mv4xjAIaAoAAAwAV1y/szIC00gAAAABJRU5ErkJggg==" transform="matrix(0.7744 0 0 0.774
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M169.019,180.564l1.88,1.119
 							c0,0,13.235-4.445,23.463-4.156s21.104,3.762,22.084,4.156c1.156,0.465,2.023,0.206,2.023,0.206l0.435-3.139
 							c0,0-12.897-6.429-24.58-5.413c-9.723,0.846-19.676,1.936-25.459,4.903C168.865,179.329,169.019,180.564,169.019,180.564z"/>
-						<path d="M218.904,178.75c0,0,0.724-9.537,0-10.91c-0.869-1.651-8.663-6.94-24.575-6.94c0,0-14.177,0-23.141,4.192
-							c-2.458,0.941-2.169,2.748-2.169,2.748l-0.154,10.4c0,0,10.777-4.682,25.343-4.399S218.904,178.75,218.904,178.75"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M218.904,178.75c0,0,0.724-9.537,0-10.91
 							c-0.869-1.651-8.663-6.94-24.575-6.94c0,0-14.177,0-23.141,4.192c-2.458,0.941-2.169,2.748-2.169,2.748l-0.154,10.4
 							c0,0,10.777-4.682,25.343-4.399S218.904,178.75,218.904,178.75z"/>
@@ -523,16 +449,8 @@ fa9368P14x//2Q==" transform="matrix(0.7744 0 0 0.7744 232.9771 218.0703)">
 							c0,7.527,6.117,13.627,13.664,13.627C327.203,303.61,333.321,297.511,333.321,289.983"/>
 						
 							<ellipse fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="319.657" cy="289.983" rx="13.664" ry="13.625"/>
-						<path d="M332.992,291.792c0-6.529-5.956-11.82-13.303-11.82c-7.346,0-13.302,5.291-13.302,11.82
-							c0,6.527,5.956,11.818,13.302,11.818C327.036,303.61,332.992,298.319,332.992,291.792"/>
 						
 							<ellipse fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="319.689" cy="291.792" rx="13.302" ry="11.82"/>
-						
-							<rect x="272.549" y="265.729" fill="#E25454" stroke="#FCFCFC" stroke-width="2" stroke-miterlimit="10" width="20.858" height="10.629"/>
-						
-							<rect x="272.549" y="265.729" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="20.858" height="10.629"/>
-						<polygon fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="347.129,265.728 347.129,277.007 
-							368.674,270.71 						"/>
 						<path d="M446.754,207.575c-8.965,0-57.982,0.465-67.815,48.32c-2.447,17.801,0.001,30.365,0.001,30.365
 							s-13.736-0.146-28.919,13.301c0,0-23.023,24.381,5.862,54.17c17.352,13.447,46.77,8.154,55.156-0.092
 							c7.486-5.535,11.263-12.301,14.512-27.184c11.567,3.471,23.228,3.326,35.229,0.578c7.263-1.662,51.475-15.615,48.294-62.607
@@ -642,8 +560,6 @@ Gct/Dg1f9LTnnRKDPteeeejR3t1aO9urR3t1aO8tC0z+xi4uF/TTTwzj/9k=" transform="matrix(
 								<clipPath id="SVGID_33_">
 									<use xlink:href="#SVGID_32_"  overflow="visible"/>
 								</clipPath>
-								<path clip-path="url(#SVGID_33_)" d="M413.353,328.12c0,14.414-13.238,26.102-29.569,26.102s-29.569-11.688-29.569-26.102
-									c0-14.412,13.238-26.098,29.569-26.098S413.353,313.708,413.353,328.12"/>
 								<path clip-path="url(#SVGID_33_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="
 									M413.353,328.12c0,14.414-13.238,26.102-29.569,26.102s-29.569-11.688-29.569-26.102c0-14.412,13.238-26.098,29.569-26.098
 									S413.353,313.708,413.353,328.12z"/>
@@ -651,12 +567,12 @@ Gct/Dg1f9LTnnRKDPteeeejR3t1aO9urR3t1aO8tC0z+xi4uF/TTTwzj/9k=" transform="matrix(
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_5_" filterUnits="userSpaceOnUse" x="352.491" y="299.739" width="61.862" height="54.614">
+								<filter id="Adobe_OpacityMaskFilter_5_" filterUnits="userSpaceOnUse" x="352.491" y="299.739" width="61.862" height="54.613">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="352.491" y="299.739" width="61.862" height="54.614" id="SVGID_34_">
+						<mask maskUnits="userSpaceOnUse" x="352.491" y="299.739" width="61.862" height="54.613" id="SVGID_34_">
 							<g filter="url(#Adobe_OpacityMaskFilter_5_)">
 								<g enable-background="new    ">
 									<g>
@@ -706,24 +622,18 @@ FzFavczOd12Ut2P/2Q==" transform="matrix(0.7744 0 0 0.7744 350.6841 297.833)">
 								<clipPath id="SVGID_38_">
 									<use xlink:href="#SVGID_37_"  overflow="visible"/>
 								</clipPath>
-								<path clip-path="url(#SVGID_38_)" d="M413.353,327.044c0,14.531-13.4,26.309-29.931,26.309s-29.932-11.777-29.932-26.309
-									c0-14.527,13.401-26.305,29.932-26.305S413.353,312.517,413.353,327.044"/>
 								
 									<ellipse clip-path="url(#SVGID_38_)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="383.422" cy="327.044" rx="29.931" ry="26.309"/>
 							</g>
 						</g>
-						<path d="M410.823,333.233c0-14.139-12.105-25.6-27.039-25.6c-14.933,0-27.038,11.461-27.038,25.6
-							c0,14.137,12.105,25.598,27.038,25.598C398.717,358.831,410.823,347.37,410.823,333.233"/>
-						
-							<ellipse fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="383.784" cy="333.233" rx="27.039" ry="25.6"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_6_" filterUnits="userSpaceOnUse" x="226.265" y="301.248" width="60.687" height="53.747">
+								<filter id="Adobe_OpacityMaskFilter_6_" filterUnits="userSpaceOnUse" x="226.265" y="301.247" width="60.687" height="53.748">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="226.265" y="301.248" width="60.687" height="53.747" id="SVGID_39_">
+						<mask maskUnits="userSpaceOnUse" x="226.265" y="301.247" width="60.687" height="53.748" id="SVGID_39_">
 							<g filter="url(#Adobe_OpacityMaskFilter_6_)">
 								<g enable-background="new    ">
 									<g>
@@ -789,12 +699,12 @@ o726NCuz+3ccuPs+TOXpy4Vn/wDSZUjjx5eGWmeKyO9ujR3t0aO9ujR3t0aO8ti2z/Rm5uV/jhw7
 							l29.493,0.076L175.517,253.634z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_7_" filterUnits="userSpaceOnUse" x="140.229" y="225.161" width="107.154" height="91.099">
+								<filter id="Adobe_OpacityMaskFilter_7_" filterUnits="userSpaceOnUse" x="140.229" y="225.161" width="107.154" height="91.098">
 								
 									<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="140.229" y="225.161" width="107.154" height="91.099" id="SVGID_44_">
+						<mask maskUnits="userSpaceOnUse" x="140.229" y="225.161" width="107.154" height="91.098" id="SVGID_44_">
 							<g filter="url(#Adobe_OpacityMaskFilter_7_)">
 								<g enable-background="new    ">
 									<g>
@@ -877,12 +787,12 @@ FtWXFtWXFtWXFtWXFtWTfj/9qr8GP9PV7sZcW1ZcW1ZcW1ZcW1ZcW1ZcW1Zf/9k=" transform="mat
 							c0-2.252,2.223-4.121,4.499-4.121l29.493,0.076L425.953,253.634z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="390.665" y="225.161" width="107.155" height="91.099">
+								<filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="390.665" y="225.161" width="107.155" height="91.098">
 								
 									<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="390.665" y="225.161" width="107.155" height="91.099" id="SVGID_49_">
+						<mask maskUnits="userSpaceOnUse" x="390.665" y="225.161" width="107.155" height="91.098" id="SVGID_49_">
 							<g filter="url(#Adobe_OpacityMaskFilter_8_)">
 								<g enable-background="new    ">
 									<g>
@@ -1009,12 +919,12 @@ Fk9mcTnyn1dG43d1S17FWGzWFYiUQX2FmUwRDxjsx/Pb+C/2xWdSruVdBgwbWCA6wz9s6GFy8Ot/
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_10_" filterUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.082">
+								<filter id="Adobe_OpacityMaskFilter_10_" filterUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.083">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.082" id="SVGID_59_">
+						<mask maskUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.083" id="SVGID_59_">
 							<g filter="url(#Adobe_OpacityMaskFilter_10_)">
 								<g enable-background="new    ">
 									<g>
@@ -1105,12 +1015,12 @@ AAgBAQEGPwC5FFyNpVWxKqIs8gAAcgAANj7cnMWoLbDdFWaaXVctA7b+knywIJuRth0k2SIZ5DkQ
 								</clipPath>
 								<defs>
 									
-										<filter id="Adobe_OpacityMaskFilter_12_" filterUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.082">
+										<filter id="Adobe_OpacityMaskFilter_12_" filterUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.083">
 										<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 										<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 									</filter>
 								</defs>
-								<mask maskUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.082" id="SVGID_64_">
+								<mask maskUnits="userSpaceOnUse" x="186.934" y="229.022" width="13.912" height="8.083" id="SVGID_64_">
 									<g filter="url(#Adobe_OpacityMaskFilter_12_)">
 										<g enable-background="new    ">
 											<g>
@@ -1160,12 +1070,12 @@ O4kI7cwzy8Ot/9k=" transform="matrix(0.7744 0 0 0.7744 184.9653 227.3633)">
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_13_" filterUnits="userSpaceOnUse" x="187.223" y="304.63" width="14.207" height="8.325">
+								<filter id="Adobe_OpacityMaskFilter_13_" filterUnits="userSpaceOnUse" x="187.223" y="304.629" width="14.207" height="8.325">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="187.223" y="304.63" width="14.207" height="8.325" id="SVGID_73_">
+						<mask maskUnits="userSpaceOnUse" x="187.223" y="304.629" width="14.207" height="8.325" id="SVGID_73_">
 							<g filter="url(#Adobe_OpacityMaskFilter_13_)">
 								<g enable-background="new    ">
 									<g>
@@ -1212,12 +1122,12 @@ IuA4DxkBii4oqEuaVp9Kf2OFuot9GHuw50Uokc1Fjx9VUW6/pmqLj49j/9k=" transform="matrix(
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_14_" filterUnits="userSpaceOnUse" x="187.224" y="304.792" width="13.911" height="8.081">
+								<filter id="Adobe_OpacityMaskFilter_14_" filterUnits="userSpaceOnUse" x="187.224" y="304.791" width="13.911" height="8.081">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="187.224" y="304.792" width="13.911" height="8.081" id="SVGID_78_">
+						<mask maskUnits="userSpaceOnUse" x="187.224" y="304.791" width="13.911" height="8.081" id="SVGID_78_">
 							<g filter="url(#Adobe_OpacityMaskFilter_14_)">
 								<g enable-background="new    ">
 									<g>
@@ -1264,12 +1174,12 @@ LIkiTuyOoIIIY1GjAcOT9JlsMwBEdaX06t9NIUkv7cxu2O93aeu/rv4P/9k=" transform="matrix(
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_15_" filterUnits="userSpaceOnUse" x="185.74" y="303.254" width="17.036" height="11.615">
+								<filter id="Adobe_OpacityMaskFilter_15_" filterUnits="userSpaceOnUse" x="185.74" y="303.253" width="17.036" height="11.615">
 								
 									<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="185.74" y="303.254" width="17.036" height="11.615" id="SVGID_83_">
+						<mask maskUnits="userSpaceOnUse" x="185.74" y="303.253" width="17.036" height="11.615" id="SVGID_83_">
 							<g filter="url(#Adobe_OpacityMaskFilter_15_)">
 								<g enable-background="new    ">
 									<g>
@@ -1307,12 +1217,12 @@ A8ZAYot0VCXVKWKUQ/sCHBX7KgWXTK296I1A8uk8uVlvfpH39j//2Q==" transform="matrix(0.77
 								</clipPath>
 								<defs>
 									
-										<filter id="Adobe_OpacityMaskFilter_16_" filterUnits="userSpaceOnUse" x="187.224" y="304.792" width="13.911" height="8.081">
+										<filter id="Adobe_OpacityMaskFilter_16_" filterUnits="userSpaceOnUse" x="187.224" y="304.791" width="13.911" height="8.081">
 										<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 										<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 									</filter>
 								</defs>
-								<mask maskUnits="userSpaceOnUse" x="187.224" y="304.792" width="13.911" height="8.081" id="SVGID_83_">
+								<mask maskUnits="userSpaceOnUse" x="187.224" y="304.791" width="13.911" height="8.081" id="SVGID_83_">
 									<g filter="url(#Adobe_OpacityMaskFilter_16_)">
 										<g enable-background="new    ">
 											<g>
@@ -1361,12 +1271,12 @@ LIkiTuyOoIIIY1GjAcOT9JlsMwBEdaX06t9NIUkv7cxu2O93aeu/rv4P/9k=" transform="matrix(
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_17_" filterUnits="userSpaceOnUse" x="145.877" y="263.94" width="8.325" height="14.206">
+								<filter id="Adobe_OpacityMaskFilter_17_" filterUnits="userSpaceOnUse" x="145.877" y="263.939" width="8.325" height="14.206">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="145.877" y="263.94" width="8.325" height="14.206" id="SVGID_92_">
+						<mask maskUnits="userSpaceOnUse" x="145.877" y="263.939" width="8.325" height="14.206" id="SVGID_92_">
 							<g filter="url(#Adobe_OpacityMaskFilter_17_)">
 								<g enable-background="new    ">
 									<g>
@@ -1413,12 +1323,12 @@ AB//2gAIAQEBBj8AuRRXLAAsSqiLK/nYAABtk1e5qNhJPcjH5TI5IV2VRmObnx5btRN0g21nlNRX
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_18_" filterUnits="userSpaceOnUse" x="145.959" y="263.94" width="8.082" height="13.911">
+								<filter id="Adobe_OpacityMaskFilter_18_" filterUnits="userSpaceOnUse" x="145.959" y="263.939" width="8.082" height="13.911">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="145.959" y="263.94" width="8.082" height="13.911" id="SVGID_97_">
+						<mask maskUnits="userSpaceOnUse" x="145.959" y="263.939" width="8.082" height="13.911" id="SVGID_97_">
 							<g filter="url(#Adobe_OpacityMaskFilter_18_)">
 								<g enable-background="new    ">
 									<g>
@@ -1465,12 +1375,12 @@ H//aAAgBAQEGPwCZixTJH9GVURcr+cgAAHhN2m7nISRqY6xNRzRXdV7zX9e3pTlubSqGekjIYav0
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_19_" filterUnits="userSpaceOnUse" x="143.922" y="262.211" width="11.616" height="17.037">
+								<filter id="Adobe_OpacityMaskFilter_19_" filterUnits="userSpaceOnUse" x="143.922" y="262.21" width="11.616" height="17.037">
 								
 									<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="143.922" y="262.211" width="11.616" height="17.037" id="SVGID_102_">
+						<mask maskUnits="userSpaceOnUse" x="143.922" y="262.21" width="11.616" height="17.037" id="SVGID_102_">
 							<g filter="url(#Adobe_OpacityMaskFilter_19_)">
 								<g enable-background="new    ">
 									<g>
@@ -1508,12 +1418,12 @@ a2qI9w8MSfNB9q5XRtyN79Uhjoda6txtNADrrhbHleOmilEkVV260RkK6kVFtOpy/9k=" transform=
 								</clipPath>
 								<defs>
 									
-										<filter id="Adobe_OpacityMaskFilter_20_" filterUnits="userSpaceOnUse" x="145.959" y="263.94" width="8.082" height="13.911">
+										<filter id="Adobe_OpacityMaskFilter_20_" filterUnits="userSpaceOnUse" x="145.959" y="263.939" width="8.082" height="13.911">
 										<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 										<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 									</filter>
 								</defs>
-								<mask maskUnits="userSpaceOnUse" x="145.959" y="263.94" width="8.082" height="13.911" id="SVGID_102_">
+								<mask maskUnits="userSpaceOnUse" x="145.959" y="263.939" width="8.082" height="13.911" id="SVGID_102_">
 									<g filter="url(#Adobe_OpacityMaskFilter_20_)">
 										<g enable-background="new    ">
 											<g>
@@ -1562,12 +1472,12 @@ H//aAAgBAQEGPwCZixTJH9GVURcr+cgAAHhN2m7nISRqY6xNRzRXdV7zX9e3pTlubSqGekjIYav0
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_21_" filterUnits="userSpaceOnUse" x="232.923" y="263.794" width="8.325" height="14.206">
+								<filter id="Adobe_OpacityMaskFilter_21_" filterUnits="userSpaceOnUse" x="232.923" y="263.793" width="8.325" height="14.206">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="232.923" y="263.794" width="8.325" height="14.206" id="SVGID_111_">
+						<mask maskUnits="userSpaceOnUse" x="232.923" y="263.793" width="8.325" height="14.206" id="SVGID_111_">
 							<g filter="url(#Adobe_OpacityMaskFilter_21_)">
 								<g enable-background="new    ">
 									<g>
@@ -1614,12 +1524,12 @@ AQY/AK/M0L9qSy24Zq+6+pUdk0au4y9scdFLcsMrWoFdGlcggyKCCCcUfu/aTHF/wECy1qE3UT0h
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_22_" filterUnits="userSpaceOnUse" x="233.085" y="263.794" width="8.081" height="13.911">
+								<filter id="Adobe_OpacityMaskFilter_22_" filterUnits="userSpaceOnUse" x="233.085" y="263.793" width="8.081" height="13.911">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="233.085" y="263.794" width="8.081" height="13.911" id="SVGID_116_">
+						<mask maskUnits="userSpaceOnUse" x="233.085" y="263.793" width="8.081" height="13.911" id="SVGID_116_">
 							<g filter="url(#Adobe_OpacityMaskFilter_22_)">
 								<g enable-background="new    ">
 									<g>
@@ -1667,12 +1577,12 @@ k5znr//Z" transform="matrix(0.7744 0 0 0.7744 231.4282 262.21)">
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_23_" filterUnits="userSpaceOnUse" x="231.428" y="262.211" width="11.616" height="17.037">
+								<filter id="Adobe_OpacityMaskFilter_23_" filterUnits="userSpaceOnUse" x="231.428" y="262.21" width="11.616" height="17.037">
 								
 									<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="231.428" y="262.211" width="11.616" height="17.037" id="SVGID_121_">
+						<mask maskUnits="userSpaceOnUse" x="231.428" y="262.21" width="11.616" height="17.037" id="SVGID_121_">
 							<g filter="url(#Adobe_OpacityMaskFilter_23_)">
 								<g enable-background="new    ">
 									<g>
@@ -1710,12 +1620,12 @@ IflTafcfOo8fjMbI4+QR30YLrtZyxK7QQSCWHjWPMxHILyHk3Opbdyru16661//Z" transform="mat
 								</clipPath>
 								<defs>
 									
-										<filter id="Adobe_OpacityMaskFilter_24_" filterUnits="userSpaceOnUse" x="233.085" y="263.794" width="8.081" height="13.911">
+										<filter id="Adobe_OpacityMaskFilter_24_" filterUnits="userSpaceOnUse" x="233.085" y="263.793" width="8.081" height="13.911">
 										<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 										<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 									</filter>
 								</defs>
-								<mask maskUnits="userSpaceOnUse" x="233.085" y="263.794" width="8.081" height="13.911" id="SVGID_121_">
+								<mask maskUnits="userSpaceOnUse" x="233.085" y="263.793" width="8.081" height="13.911" id="SVGID_121_">
 									<g filter="url(#Adobe_OpacityMaskFilter_24_)">
 										<g enable-background="new    ">
 											<g>
@@ -1769,12 +1679,12 @@ k5znr//Z" transform="matrix(0.7744 0 0 0.7744 231.4282 262.21)">
 							c-3.255,2.461-9.368,7.361-9.368,9.104C182.341,289.981,182.356,299.862,182.356,299.862z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_25_" filterUnits="userSpaceOnUse" x="181.326" y="277.162" width="25.424" height="20.314">
+								<filter id="Adobe_OpacityMaskFilter_25_" filterUnits="userSpaceOnUse" x="181.326" y="277.161" width="25.424" height="20.314">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="181.326" y="277.162" width="25.424" height="20.314" id="SVGID_130_">
+						<mask maskUnits="userSpaceOnUse" x="181.326" y="277.161" width="25.424" height="20.314" id="SVGID_130_">
 							<g filter="url(#Adobe_OpacityMaskFilter_25_)">
 								<g enable-background="new    ">
 									<g>
@@ -1821,12 +1731,12 @@ Ez4+Bm2a1+EkV/O3Ld71aN1bbfmrxH9j3eYpsL9xY8utdtZgnR5YJmJCJpuGBO3pWr8TI+jtUqyY
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_26_" filterUnits="userSpaceOnUse" x="181.758" y="280.452" width="24.584" height="21.591">
+								<filter id="Adobe_OpacityMaskFilter_26_" filterUnits="userSpaceOnUse" x="181.758" y="280.452" width="24.584" height="21.59">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="181.758" y="280.452" width="24.584" height="21.591" id="SVGID_135_">
+						<mask maskUnits="userSpaceOnUse" x="181.758" y="280.452" width="24.584" height="21.59" id="SVGID_135_">
 							<g filter="url(#Adobe_OpacityMaskFilter_26_)">
 								<g enable-background="new    ">
 									<g>
@@ -1882,12 +1792,12 @@ pZZ6erpnHHVSy8wcE/kn3P5f4RxuwvXUW4culvNuuKCUkzwlM1ZBm0x4nabdvWjxO027etHidpt2
 							c-3.254-2.461-9.384-8.807-9.384-10.547C182.614,252.946,182.614,243.234,182.614,243.234z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_27_" filterUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.139">
+								<filter id="Adobe_OpacityMaskFilter_27_" filterUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.138">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.139" id="SVGID_138_">
+						<mask maskUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.138" id="SVGID_138_">
 							<g filter="url(#Adobe_OpacityMaskFilter_27_)">
 								<g enable-background="new    ">
 									<g>
@@ -1934,12 +1844,12 @@ FRETPNcxYTRI/9k=" transform="matrix(0.7744 0 0 0.7744 179.5444 236.6562)">
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_28_" filterUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.611">
+								<filter id="Adobe_OpacityMaskFilter_28_" filterUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.61">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.611" id="SVGID_143_">
+						<mask maskUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.61" id="SVGID_143_">
 							<g filter="url(#Adobe_OpacityMaskFilter_28_)">
 								<g enable-background="new    ">
 									<g>
@@ -2000,12 +1910,12 @@ qnK5m/k9dyFy4Y70tHRfM2k2pGd3YvJyy8WKn9Yzzms5/jHPfH73tjZONk42TjZ7W/sc38/mx//Z" tr
 							c-3.33-2.461-9.601-8.807-9.601-10.547C182.325,252.946,182.325,243.234,182.325,243.234z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_29_" filterUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.139">
+								<filter id="Adobe_OpacityMaskFilter_29_" filterUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.138">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.139" id="SVGID_148_">
+						<mask maskUnits="userSpaceOnUse" x="181.615" y="238.586" width="25.424" height="19.138" id="SVGID_148_">
 							<g filter="url(#Adobe_OpacityMaskFilter_29_)">
 								<g enable-background="new    ">
 									<g>
@@ -2052,12 +1962,12 @@ FRETPNcxYTRI/9k=" transform="matrix(0.7744 0 0 0.7744 179.5444 236.6562)">
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_30_" filterUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.611">
+								<filter id="Adobe_OpacityMaskFilter_30_" filterUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.61">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.611" id="SVGID_153_">
+						<mask maskUnits="userSpaceOnUse" x="182.657" y="241.551" width="23.315" height="15.61" id="SVGID_153_">
 							<g filter="url(#Adobe_OpacityMaskFilter_30_)">
 								<g enable-background="new    ">
 									<g>
@@ -2115,12 +2025,12 @@ qnK5m/k9dyFy4Y70tHRfM2k2pGd3YvJyy8WKn9Yzzms5/jHPfH73tjZONk42TjZ7W/sc38/mx//Z" tr
 							C171.628,280.751,162.182,280.751,162.182,280.751z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_31_" filterUnits="userSpaceOnUse" x="157.21" y="260.336" width="28.532" height="21.182">
+								<filter id="Adobe_OpacityMaskFilter_31_" filterUnits="userSpaceOnUse" x="157.21" y="260.335" width="28.532" height="21.182">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="157.21" y="260.336" width="28.532" height="21.182" id="SVGID_158_">
+						<mask maskUnits="userSpaceOnUse" x="157.21" y="260.335" width="28.532" height="21.182" id="SVGID_158_">
 							<g filter="url(#Adobe_OpacityMaskFilter_31_)">
 								<g enable-background="new    ">
 									<g>
@@ -2170,12 +2080,12 @@ grWSpSjNSjaSToV/P3n5r/jGXoy9GXoy9GXo/9k=" transform="matrix(0.7744 0 0 0.7744 15
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_32_" filterUnits="userSpaceOnUse" x="158.811" y="262.744" width="25.658" height="18.773">
+								<filter id="Adobe_OpacityMaskFilter_32_" filterUnits="userSpaceOnUse" x="158.811" y="262.743" width="25.658" height="18.773">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="158.811" y="262.744" width="25.658" height="18.773" id="SVGID_163_">
+						<mask maskUnits="userSpaceOnUse" x="158.811" y="262.743" width="25.658" height="18.773" id="SVGID_163_">
 							<g filter="url(#Adobe_OpacityMaskFilter_32_)">
 								<g enable-background="new    ">
 									<g>
@@ -2236,12 +2146,12 @@ jYMjzRiwk+6v/9k=" transform="matrix(0.7744 0 0 0.7744 157.0874 260.6611)">
 							c-0.506,0.576-1.089,1.318-1.089,1.928c0,0.629,0.624,1.461,1.161,2.094c2.393,2.824,8.186,8.15,9.88,8.15H224.521z"/>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_33_" filterUnits="userSpaceOnUse" x="200.959" y="260.217" width="28.533" height="21.184">
+								<filter id="Adobe_OpacityMaskFilter_33_" filterUnits="userSpaceOnUse" x="200.959" y="260.216" width="28.533" height="21.184">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="200.959" y="260.217" width="28.533" height="21.184" id="SVGID_168_">
+						<mask maskUnits="userSpaceOnUse" x="200.959" y="260.216" width="28.533" height="21.184" id="SVGID_168_">
 							<g filter="url(#Adobe_OpacityMaskFilter_33_)">
 								<g enable-background="new    ">
 									<g>
@@ -2292,12 +2202,12 @@ TRwGR5XRlVShG+RhpNeY9nUv4HXbres09P3uOvT1enq9PV6er/I67+no/cr/2Q==" transform="mat
 						</g>
 						<defs>
 							
-								<filter id="Adobe_OpacityMaskFilter_34_" filterUnits="userSpaceOnUse" x="202.234" y="262.627" width="25.658" height="18.773">
+								<filter id="Adobe_OpacityMaskFilter_34_" filterUnits="userSpaceOnUse" x="202.234" y="262.626" width="25.658" height="18.773">
 								<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
 								<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
 							</filter>
 						</defs>
-						<mask maskUnits="userSpaceOnUse" x="202.234" y="262.627" width="25.658" height="18.773" id="SVGID_173_">
+						<mask maskUnits="userSpaceOnUse" x="202.234" y="262.626" width="25.658" height="18.773" id="SVGID_173_">
 							<g filter="url(#Adobe_OpacityMaskFilter_34_)">
 								<g enable-background="new    ">
 									<g>
@@ -2354,14 +2264,10 @@ sCptxKVFN/xUL9NSJEsH9OM4cSdji73w/TfSWI7aWmkCyUJFgBpyXkq8WnmJAxQZDpLhA7SFXtjH
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M459.636,243.196
 							c0,9.664-6.177,13.279-14.321,13.279c-8.146,0-14.321-3.904-14.321-13.592c0-8.604,5.88-13.085,14.026-13.085
 							C453.165,229.799,459.636,234.715,459.636,243.196z"/>
-						<path d="M458.419,247.157c0-8.659-5.809-12.877-13.072-12.877c-8.273,0-13.071,5.251-13.071,12.483
-							c0,7.253,5.727,11.048,12.991,11.048C452.531,257.812,458.419,253.259,458.419,247.157"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M458.419,247.157
 							c0-8.659-5.809-12.877-13.072-12.877c-8.273,0-13.071,5.251-13.071,12.483c0,7.253,5.727,11.048,12.991,11.048
 							C452.531,257.812,458.419,253.259,458.419,247.157z"/>
 						<path d="M452.854,251.954h-15.013l7.498-13.081L452.854,251.954z M439.192,251.22h12.313l-6.166-10.913L439.192,251.22z"/>
-						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M452.854,251.954h-15.013l7.498-13.081
-							L452.854,251.954z M439.192,251.22h12.313l-6.166-10.913L439.192,251.22z"/>
 						<path d="M425.802,271.21c0,9.664-6.178,13.279-14.322,13.279c-8.146,0-14.32-3.904-14.32-13.592
 							c0-8.602,5.879-13.084,14.025-13.084C419.33,257.813,425.802,262.728,425.802,271.21"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M425.802,271.21
@@ -2369,10 +2275,6 @@ sCptxKVFN/xUL9NSJEsH9OM4cSdji73w/TfSWI7aWmkCyUJFgBpyXkq8WnmJAxQZDpLhA7SFXtjH
 							C419.33,257.813,425.802,262.728,425.802,271.21z"/>
 						<path d="M424.584,275.171c0-8.658-5.808-12.875-13.071-12.875c-8.273,0-13.072,5.248-13.072,12.482
 							c0,7.254,5.727,11.049,12.99,11.049C418.696,285.827,424.584,281.272,424.584,275.171"/>
-						<path fill="#E25454" stroke="#FCFCFC" stroke-width="2" stroke-miterlimit="10" d="M424.584,275.171
-							c0-8.658-5.808-12.875-13.071-12.875c-8.273,0-13.072,5.248-13.072,12.482c0,7.254,5.727,11.049,12.99,11.049
-							C418.696,285.827,424.584,281.272,424.584,275.171z"/>
-						<rect x="403.998" y="267.681" width="14.965" height="12.635"/>
 						
 							<rect x="403.998" y="267.681" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" width="14.965" height="12.635"/>
 						<path d="M459.636,297.888c0,9.664-6.177,13.279-14.321,13.279c-8.146,0-14.321-3.904-14.321-13.592
@@ -2380,13 +2282,9 @@ sCptxKVFN/xUL9NSJEsH9OM4cSdji73w/TfSWI7aWmkCyUJFgBpyXkq8WnmJAxQZDpLhA7SFXtjH
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M459.636,297.888
 							c0,9.664-6.177,13.279-14.321,13.279c-8.146,0-14.321-3.904-14.321-13.592c0-8.604,5.88-13.084,14.026-13.084
 							C453.165,284.491,459.636,289.405,459.636,297.888z"/>
-						<path d="M458.419,301.849c0-8.658-5.809-12.877-13.072-12.877c-8.273,0-13.071,5.25-13.071,12.484
-							c0,7.254,5.727,11.049,12.991,11.049C452.531,312.505,458.419,307.95,458.419,301.849"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M458.419,301.849
 							c0-8.658-5.809-12.877-13.072-12.877c-8.273,0-13.071,5.25-13.071,12.484c0,7.254,5.727,11.049,12.991,11.049
 							C452.531,312.505,458.419,307.95,458.419,301.849z"/>
-						<polygon fill="#FFFFFF" points="438.314,308.347 436.539,306.835 443.522,300.882 436.502,294.896 438.278,293.351 
-							445.333,299.368 452.355,293.351 454.126,294.896 447.107,300.882 454.126,306.896 452.355,308.409 445.333,302.394 						"/>
 						<path d="M493.688,271.21c0,9.664-6.177,13.279-14.322,13.279c-8.145,0-14.319-3.904-14.319-13.592
 							c0-8.602,5.879-13.084,14.024-13.084S493.688,262.728,493.688,271.21"/>
 						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M493.688,271.21
@@ -2394,26 +2292,147 @@ sCptxKVFN/xUL9NSJEsH9OM4cSdji73w/TfSWI7aWmkCyUJFgBpyXkq8WnmJAxQZDpLhA7SFXtjH
 							S493.688,262.728,493.688,271.21z"/>
 						<path d="M492.471,275.171c0-8.658-5.809-12.875-13.071-12.875c-8.274,0-13.072,5.248-13.072,12.482
 							c0,7.254,5.727,11.049,12.99,11.049C486.583,285.827,492.471,281.272,492.471,275.171"/>
-						<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M492.471,275.171
-							c0-8.658-5.809-12.875-13.071-12.875c-8.274,0-13.072,5.248-13.072,12.482c0,7.254,5.727,11.049,12.99,11.049
-							C486.583,285.827,492.471,281.272,492.471,275.171z"/>
-						<path d="M488.586,273.972c0,4.709-4.113,8.529-9.187,8.529c-5.075,0-9.188-3.82-9.188-8.529c0-4.713,4.113-8.533,9.188-8.533
-							C484.473,265.438,488.586,269.259,488.586,273.972"/>
 						
 							<ellipse fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="479.399" cy="273.972" rx="9.188" ry="8.529"/>
 					</g>
 				</g>
 			</g>
 		</g>
-		<g opacity="0.2">
-			<path fill="#FFFFFF" d="M306.584,173.75c0.839,3.003-1.025,5.509-4.143,5.57l-57.33,1.113c-3.118,0.061-6.934-2.105-8.481-4.812
+	</g>
+	<g id="R3">
+		<g>
+			<path fill="#4F4F4F" d="M322.704,329.299c-2.16-0.415-3.903,1.045-3.874,3.245l1.894,141.33c0.029,2.2,1.854,3.991,4.054,3.98
+				l126-0.627c2.2-0.011,3.354-1.699,2.562-3.752l-41.792-108.533c-0.791-2.053-3.116-3.083-5.168-2.288l-13.206,5.111
+				c-2.052,0.795-5.528,1.358-7.726,1.254l-20.01-0.953c-2.197-0.104-5.539-1.116-7.425-2.248l-13.141-7.885
+				c-1.886-1.132-3.82-3.814-4.297-5.962l-3.598-16.191c-0.478-2.147-2.636-4.244-4.796-4.659L322.704,329.299z"/>
+		</g>
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M413.353,328.12c0,14.414-13.238,26.102-29.569,26.102
+			s-29.569-11.688-29.569-26.102c0-14.412,13.238-26.098,29.569-26.098S413.353,313.708,413.353,328.12"/>
+	</g>
+	<g id="R2">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M444.355,146.656c-6.223,0-15.074-0.057-20.32,4.664
+			c-2.169,1.951-1.573,5.855-1.465,7.537c4.019-2.104,16.05-3.362,21.311-3.362c5.53,0,15.725,0.597,23.1,5.043
+			c0.674-3.42,0.435-8.152-1.606-9.34C461.083,148.703,453.585,146.656,444.355,146.656"/>
+		<g>
+			<path fill="#4F4F4F" d="M326.333,12.238c-2.199-0.039-4.035,1.729-4.08,3.928l-2.062,101.71
+				c-0.045,2.199,1.615,4.601,3.688,5.336l86.462,30.661c2.073,0.735,4.574-0.273,5.559-2.241l2.422-4.845
+				c0.984-1.968,3.507-4.115,5.607-4.771l3.029-0.947c2.101-0.656,5.618-1.193,7.818-1.193h10.667c2.2,0,4.096-1.797,4.213-3.994
+				l6.241-117.346c0.117-2.197-1.587-4.026-3.786-4.065L326.333,12.238z"/>
+		</g>
+	</g>
+	<g id="R1">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M469.89,178.75c0,0,0.723-9.537,0-10.91
+			c-0.869-1.651-9.798-6.381-24.575-6.94c0,0-14.177,0-23.141,4.192c-2.459,0.941-2.169,2.748-2.169,2.748l-0.155,10.4
+			c0,0,10.778-4.682,25.343-4.399C459.758,174.123,469.89,178.75,469.89,178.75"/>
+		<g>
+			<path fill="#4F4F4F" d="M457.979,139.553c-2.128-0.556-3.772-2.807-3.654-5.004l6.235-115.346
+				c0.119-2.197,2.016-4.009,4.216-4.027l153.333-1.267c2.2-0.019,3.989,1.767,3.977,3.967l-0.618,105.332
+				c-0.013,2.2-1.645,4.782-3.627,5.737l-122.794,59.194c-1.982,0.955-4.438,0.143-5.46-1.807l-3.621-6.913
+				c-1.021-1.949-2.555-5.203-3.408-7.23l-2.229-5.294c-0.854-2.027-2.61-5.142-3.904-6.921l-0.628-0.862
+				c-1.294-1.779-2.87-4.959-3.502-7.066l-1.701-5.671c-0.632-2.107-2.892-4.286-5.02-4.841L457.979,139.553z"/>
+		</g>
+	</g>
+	<g id="L3">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M286.177,327.044c0,14.531-13.399,26.309-29.931,26.309
+			c-16.53,0-29.931-11.777-29.931-26.309c0-14.527,13.4-26.305,29.931-26.305C272.778,300.739,286.177,312.517,286.177,327.044"/>
+		<g>
+			<path fill="#4F4F4F" d="M306.065,328.614c-2.175,0.327-4.346,2.351-4.823,4.498l-3.598,16.191
+				c-0.477,2.147-2.411,4.83-4.298,5.962l-13.14,7.885c-1.887,1.132-5.228,2.144-7.426,2.248l-20.009,0.953
+				c-2.198,0.104-5.674-0.459-7.726-1.254l-13.206-5.111c-2.052-0.795-4.376,0.236-5.165,2.29l-42.464,110.529
+				c-0.789,2.054,0.365,3.743,2.565,3.755l124.667,0.627c2.2,0.012,4-1.779,4-3.979l-0.001-142c0-2.2-1.78-3.733-3.956-3.406
+				L306.065,328.614z"/>
+		</g>
+	</g>
+	<g id="L2">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M194.796,146.656c-6.221,0-15.074-0.057-20.319,4.664
+			c-2.169,1.951-1.574,5.855-1.465,7.537c4.019-2.104,16.05-3.362,21.311-3.362c5.53,0,15.725,0.597,23.099,5.043
+			c0.675-3.42,0.436-8.152-1.606-9.34C211.526,148.703,200.501,146.656,194.796,146.656"/>
+		<g>
+			<path fill="#4F4F4F" d="M310.777,11.229c2.2-0.011,3.989,1.78,3.976,3.98l-0.619,104c-0.013,2.2-1.735,4.558-3.827,5.24
+				l-82.395,26.854c-2.092,0.682-4.608-0.37-5.592-2.338l-2.422-4.845c-0.984-1.968-3.507-4.115-5.607-4.771l-3.03-0.947
+				c-2.1-0.656-5.618-1.193-7.818-1.193h-10.667c-2.2,0-4.096-1.797-4.212-3.994L182.321,15.87
+				c-0.117-2.197,1.587-4.003,3.788-4.014L310.777,11.229z"/>
+		</g>
+	</g>
+	<g id="L1">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M218.904,178.75c0,0,0.724-9.537,0-10.91
+			c-0.869-1.651-8.663-6.94-24.575-6.94c0,0-14.177,0-23.141,4.192c-2.458,0.941-2.169,2.748-2.169,2.748l-0.154,10.4
+			c0,0,10.777-4.682,25.343-4.399S218.904,178.75,218.904,178.75"/>
+		<g>
+			<path fill="#4F4F4F" d="M180.24,136.886c2.129-0.556,3.773-2.807,3.655-5.004L177.66,16.537
+				c-0.119-2.197-2.016-4.022-4.215-4.057L11.443,9.938c-2.2-0.035-4,1.737-4,3.937v104.001c0,2.2,1.63,4.764,3.622,5.698
+				l132.09,61.937c1.992,0.934,4.457,0.104,5.478-1.845l3.622-6.913c1.021-1.949,2.555-5.203,3.408-7.23l2.229-5.293
+				c0.854-2.027,2.611-5.142,3.905-6.922l0.628-0.863c1.294-1.78,2.87-4.959,3.502-7.066l1.701-5.671
+				c0.632-2.107,2.891-4.285,5.02-4.841L180.24,136.886z"/>
+		</g>
+	</g>
+	<g id="square">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M424.584,275.171c0-8.658-5.808-12.875-13.071-12.875
+			c-8.273,0-13.072,5.248-13.072,12.482c0,7.254,5.727,11.049,12.99,11.049C418.696,285.827,424.584,281.272,424.584,275.171z"/>
+		<rect x="403.998" y="267.681" fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" width="14.965" height="12.635"/>
+		<g>
+			<path fill="#4F4F4F" d="M417.034,360.88c-0.875-2.019-0.675-5.22,0.444-7.113l4.597-7.781c1.119-1.894,3.568-2.5,5.441-1.347
+				l10.521,6.475c1.873,1.153,5.073,2.775,7.11,3.605l10.592,4.314c2.037,0.83,4.868,2.882,6.29,4.561l94.828,111.896
+				c1.422,1.679,0.786,3.025-1.414,2.994l-83.999-1.219c-2.2-0.031-4.716-1.709-5.591-3.728L417.034,360.88z"/>
+		</g>
+	</g>
+	<g id="triangle">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M458.419,247.157c0-8.659-5.809-12.877-13.072-12.877
+			c-8.273,0-13.071,5.251-13.071,12.483c0,7.253,5.727,11.048,12.991,11.048C452.531,257.812,458.419,253.259,458.419,247.157"/>
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M452.854,251.954h-15.013l7.498-13.081L452.854,251.954z"/>
+		<g>
+			<path fill="#4F4F4F" d="M496.446,197.512c-0.918-1.999-0.04-4.398,1.952-5.332l119.424-55.942
+				c1.992-0.933,3.638,0.103,3.656,2.303l0.598,70.667c0.019,2.2-1.68,4.55-3.774,5.223l-100.383,32.224
+				c-2.095,0.672-4.282-0.514-4.861-2.636l-5.895-21.616c-0.579-2.123-1.805-5.495-2.723-7.494L496.446,197.512z"/>
+		</g>
+	</g>
+	<g id="cross">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M458.419,301.849c0-8.658-5.809-12.877-13.072-12.877
+			c-8.273,0-13.071,5.25-13.071,12.484c0,7.254,5.727,11.049,12.991,11.049C452.531,312.505,458.419,307.95,458.419,301.849"/>
+		<line fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" x1="437.814" y1="294.318" x2="451.853" y2="306.994"/>
+		<line fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" x1="438.36" y1="307.131" x2="451.445" y2="294.591"/>
+		<g>
+			<path fill="#4F4F4F" d="M512.119,335.821c0.361-2.17,2.423-3.595,4.58-3.166l99.488,19.773c2.157,0.429,3.923,2.579,3.923,4.779
+				v118c0,2.2-1.8,3.976-4,3.946l-42-0.561c-2.2-0.029-5.186-1.408-6.636-3.062l-93.396-106.646
+				c-1.45-1.654-0.975-3.701,1.057-4.547l8.615-3.59c2.031-0.846,5.407-2.084,7.504-2.751l7.044-2.242
+				c2.097-0.667,4.946-2.61,6.334-4.317l3.621-4.457c1.388-1.707,2.818-4.88,3.18-7.05L512.119,335.821z"/>
+		</g>
+	</g>
+	<g id="circle">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M492.471,275.171c0-8.658-5.809-12.875-13.071-12.875
+			c-8.274,0-13.072,5.248-13.072,12.482c0,7.254,5.727,11.049,12.99,11.049C486.583,285.827,492.471,281.272,492.471,275.171z"/>
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M488.586,273.972c0,4.709-4.113,8.529-9.187,8.529
+			c-5.075,0-9.188-3.82-9.188-8.529c0-4.713,4.113-8.533,9.188-8.533C484.473,265.438,488.586,269.259,488.586,273.972"/>
+		<g>
+			<path fill="#4F4F4F" d="M514.711,259.83c-0.331-2.175,1.118-4.485,3.221-5.134l100.355-30.976c2.103-0.649,3.822,0.62,3.822,2.82
+				v114.667c0,2.2-1.771,3.677-3.935,3.282l-98.13-17.896c-2.165-0.395-3.813-2.514-3.665-4.709l2.126-31.354
+				c0.148-2.195,0-5.771-0.331-7.945L514.711,259.83z"/>
+		</g>
+	</g>
+	<g id="special">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M332.992,291.792c0-6.529-5.956-11.82-13.303-11.82
+			c-7.346,0-13.302,5.291-13.302,11.82c0,6.527,5.956,11.818,13.302,11.818C327.036,303.61,332.992,298.319,332.992,291.792"/>
+		<g>
+			<path fill="#4F4F4F" d="M302.928,138.458c-0.45-2.154,0.901-4.449,3.002-5.1l8.083-2.507c2.101-0.651,5.554-0.701,7.673-0.109
+				l13.795,3.85c2.119,0.591,3.479,2.836,3.023,4.988l-7.342,34.674c-0.456,2.152-2.629,3.96-4.828,4.019l-11.002,0.289
+				c-2.199,0.058-4.367-1.656-4.817-3.81L302.928,138.458z"/>
+		</g>
+	</g>
+	<g id="start">
+		<polygon fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" points="347.129,265.728 347.129,277.007 368.674,270.71 		"/>
+		<g>
+			<path fill="#4F4F4F" d="M345.218,139.776c0.49-2.145,2.564-3.234,4.608-2.421l54.566,21.709c2.044,0.813,3.579,3.273,3.41,5.467
+				l-0.721,9.357c-0.169,2.193-1.057,5.488-1.974,7.321c-0.916,1.833-3.465,3.28-5.664,3.215l-60.004-1.765
+				c-2.199-0.065-3.597-1.873-3.106-4.017L345.218,139.776z"/>
+		</g>
+	</g>
+	<g id="select">
+		<g>
+			<path fill="#4F4F4F" d="M306.584,173.75c0.839,3.003-1.025,5.509-4.143,5.57l-57.33,1.113c-3.118,0.061-6.934-2.105-8.481-4.812
 				l-2.374-4.155c-1.547-2.708-3.863-7.022-5.146-9.589s0.082-5.487,3.034-6.491l57.932-19.685c2.952-1.003,6.054,0.633,6.894,3.636
 				L306.584,173.75z"/>
-			<path fill="none" stroke="#FCFCFC" stroke-width="2" stroke-miterlimit="10" d="M306.584,173.75
-				c0.839,3.003-1.025,5.509-4.143,5.57l-57.33,1.113c-3.118,0.061-6.934-2.105-8.481-4.812l-2.374-4.155
-				c-1.547-2.708-3.863-7.022-5.146-9.589s0.082-5.487,3.034-6.491l57.932-19.685c2.952-1.003,6.054,0.633,6.894,3.636
-				L306.584,173.75z"/>
 		</g>
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M273.64,266.622l20.465-0.253v9.854h-20.212L273.64,266.622z"/>
 	</g>
 	<g id="Dpad-right">
 		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M223.351,280.399c2.198,0,3.541-0.518,3.541-2.367v-11.762
@@ -2457,13 +2476,13 @@ sCptxKVFN/xUL9NSJEsH9OM4cSdji73w/TfSWI7aWmkCyUJFgBpyXkq8WnmJAxQZDpLhA7SFXtjH
 				c2.149,0.469,4.381-0.883,4.96-3.005l5.895-21.614c0.579-2.123,1.804-5.495,2.723-7.494L141.774,194.844z"/>
 		</g>
 	</g>
-	<g id="L3">
-		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M286.177,327.044c0,14.531-13.399,26.309-29.931,26.309
-			c-16.53,0-29.931-11.777-29.931-26.309c0-14.527,13.4-26.305,29.931-26.305C272.778,300.739,286.177,312.517,286.177,327.044"/>
+	<g id="RS">
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M410.823,327.733c0-14.139-12.105-25.6-27.039-25.6
+			c-14.933,0-27.038,11.461-27.038,25.6c0,14.137,12.105,25.598,27.038,25.598C398.717,353.331,410.823,341.87,410.823,327.733"/>
 	</g>
 	<g id="LS">
-		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M297.478,311.841c0-14.139-12.105-25.6-27.039-25.6
-			c-14.933,0-27.038,11.461-27.038,25.6c0,14.135,12.105,25.596,27.038,25.596C285.373,337.437,297.478,325.976,297.478,311.841z"/>
+		<path fill="#353535" stroke="#FFFFFF" stroke-miterlimit="10" d="M282.978,325.841c0-14.139-12.105-25.6-27.039-25.6
+			c-14.933,0-27.038,11.461-27.038,25.6c0,14.135,12.105,25.596,27.038,25.596C270.873,351.437,282.978,339.976,282.978,325.841z"/>
 	</g>
 </g>
 </svg>
