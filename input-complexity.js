@@ -1,3 +1,13 @@
+// TODOs
+// - add more windows
+// - add visualisation
+// - performance???
+// - special treating of axes?
+// 		- dead zones?
+// 		- beats?
+
+
+
  // monkey patching
  String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
@@ -17,6 +27,7 @@ var colors = {
 }
 
 var windowSize = 1; // seconds
+var deadZone = 0.3;
 
 var storedData = {};
 var externalClock = 0; // time reference from the streaming data, not precise!
@@ -38,7 +49,7 @@ var truncateData = function(arr, time) {
 
 var wasActive = function(arr) {
 	var active = arr.reduce(function(accumulator, current) {
-		return accumulator || (current.value !== 0);
+		return accumulator || (Math.abs(current.value) > deadZone);
 	}, false)
 
 	return active;

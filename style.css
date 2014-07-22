@@ -79,3 +79,32 @@ hr {
       left: -10px;
       color: #e25454;
       font-size: 3em; }
+
+#complexity .labelBox {
+  float: left;
+  background-color: #555555;
+  border-radius: 0.5em;
+  height: 6em;
+  width: 45px; }
+  #complexity .labelBox .label {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    display: inline-block;
+    margin: 0.5em;
+    margin-left: 2em; }
+#complexity .data {
+  margin-left: 50px; }
+#complexity .element {
+  width: 400px;
+  height: 2em;
+  background-color: #b6ce4e;
+  border-radius: 0.5em;
+  margin: 2px; }
+#complexity #history {
+  width: 600px;
+  float: left; }
+#complexity #live {
+  margin-left: 410px; }
+  #complexity #live .element {
+    width: 200px;
+    background-color: #6d7b2e; }
