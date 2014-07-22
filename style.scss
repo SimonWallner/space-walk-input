@@ -121,6 +121,8 @@ hr {
 
 // === input complexity stuff ===
 #complexity {
+	margin-top: 1em;
+
 	font-family: 'Dosis';
 	font-weight: 200;
 	.labelBox {
@@ -129,50 +131,91 @@ hr {
 			transform-origin: left top 0;
 			display: inline-block;
 			margin: 0.5em;
-			margin-left: 2em;
+			margin-left: 1.6em;
 		}
 
 		float: left;
 		background-color: $grey;
-		border-radius: 0.5em;
-		height: 6em;
-		width: 45px;
+		border-radius: 0.3em;
+		height: 5.5em;
+		width: 30px;
 	}
 	.data {
-		margin-left: 50px;
+		margin-left: 35px;
 	}
 
-	.group {
-		&:nth-child(2) {
-			.element {
-				background-color: $orange;
-			}
-		}
-		&:nth-child(3) {
-			.element {
-				background-color: $lavender;
-			}
-		}
-	}
 	.element {
 		width: 600px;
 		height: 1.5em;
 		font-weight: 400;
-		text-align: right;
-		padding-top: 0.4em;
-		padding-right: 0.4em;
-		background-color: $lime;
-		border-radius: 0.5em;
-		margin: 2px;
-		overflow: none;
+		padding-top: 0.1em;
+		border: solid 1px $lime;
+		border-radius: 0.3em;
+		margin-bottom: 3px;
+		margin-right: 3px;
+		overflow: hidden;
+		white-space: nowrap;
+		position: relative;
+		// background-color: $grey;
+		
+		.label {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 300px;
+			padding: 0.5em;
+			padding-top: 0.2em;
+			background: linear-gradient(to right, rgba(1, 0, 0, 0.65) 0%, rgba(1, 0, 0, 0) 100%);
+		}
 	}
+	.bit {
+		width: 1em;
+		height: 2em;
+		border-top-left-radius: 0.2em;
+		border-top-right-radius: 0.2em;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		background-color: $orange;
+		display: inline-block;
+		// float: left;
+		margin-right: -1px;
+	}
+	
 	
 	#history {
 		float: left;
+
+		.group {
+			&:nth-child(1) {
+				.element {
+					border: solid 1px $lime;
+				}
+				.bit {
+					background-color: $lime;
+				}
+			}
+
+			&:nth-child(2) {
+				.element {
+					border: solid 1px $orange;
+				}
+				.bit {
+					background-color: $orange;
+				}
+			}
+			&:nth-child(3) {
+				.element {
+					border: solid 1px $lavender;
+				}
+				.bit {
+					background-color: $lavender;
+				}
+			}
+		}
 	}
 
 	.divider {
-		height: 300px;
+		height: 270px;
 		// width: 10px;
 		border-left: dashed 2px $grey;
 		margin-left: 2px;
@@ -182,9 +225,33 @@ hr {
 	#live {
 		.element {
 			width: 200px;
-			opacity: 0.6;
 		}
-		margin-left: 615px;
+		margin-left: 613px;
+
+		.group {
+			&:nth-child(1) {
+				.element {
+					background-color: $lime * 0.7;
+					border: solid 1px $lime * 0.7;
+				}
+			}			
+
+			&:nth-child(2) {
+				.element {
+					background-color: $orange * 0.7;
+					border: solid 1px $orange * 0.7;
+				}
+			}
+			&:nth-child(3) {
+				.element {
+					background-color: $lavender * 0.7;
+					border: solid 1px $lavender * 0.7;
+				}
+			}
+		}
+		.label {
+			background: none;
+		}
 	}
 
 }

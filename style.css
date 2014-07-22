@@ -82,46 +82,84 @@ hr {
       font-size: 3em; }
 
 #complexity {
+  margin-top: 1em;
   font-family: 'Dosis';
   font-weight: 200; }
   #complexity .labelBox {
     float: left;
     background-color: #555555;
-    border-radius: 0.5em;
-    height: 6em;
-    width: 45px; }
+    border-radius: 0.3em;
+    height: 5.5em;
+    width: 30px; }
     #complexity .labelBox .label {
       transform: rotate(90deg);
       transform-origin: left top 0;
       display: inline-block;
       margin: 0.5em;
-      margin-left: 2em; }
+      margin-left: 1.6em; }
   #complexity .data {
-    margin-left: 50px; }
-  #complexity .group:nth-child(2) .element {
-    background-color: #e89f49; }
-  #complexity .group:nth-child(3) .element {
-    background-color: #8885ed; }
+    margin-left: 35px; }
   #complexity .element {
     width: 600px;
     height: 1.5em;
     font-weight: 400;
-    text-align: right;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    background-color: #b6ce4e;
-    border-radius: 0.5em;
-    margin: 2px;
-    overflow: none; }
+    padding-top: 0.1em;
+    border: solid 1px #b6ce4e;
+    border-radius: 0.3em;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative; }
+    #complexity .element .label {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+      padding: 0.5em;
+      padding-top: 0.2em;
+      background: linear-gradient(to right, rgba(1, 0, 0, 0.65) 0%, rgba(1, 0, 0, 0) 100%); }
+  #complexity .bit {
+    width: 1em;
+    height: 2em;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #e89f49;
+    display: inline-block;
+    margin-right: -1px; }
   #complexity #history {
     float: left; }
+    #complexity #history .group:nth-child(1) .element {
+      border: solid 1px #b6ce4e; }
+    #complexity #history .group:nth-child(1) .bit {
+      background-color: #b6ce4e; }
+    #complexity #history .group:nth-child(2) .element {
+      border: solid 1px #e89f49; }
+    #complexity #history .group:nth-child(2) .bit {
+      background-color: #e89f49; }
+    #complexity #history .group:nth-child(3) .element {
+      border: solid 1px #8885ed; }
+    #complexity #history .group:nth-child(3) .bit {
+      background-color: #8885ed; }
   #complexity .divider {
-    height: 300px;
+    height: 270px;
     border-left: dashed 2px #555555;
     margin-left: 2px;
     float: left; }
   #complexity #live {
-    margin-left: 615px; }
+    margin-left: 613px; }
     #complexity #live .element {
-      width: 200px;
-      opacity: 0.6; }
+      width: 200px; }
+    #complexity #live .group:nth-child(1) .element {
+      background-color: #7f9036;
+      border: solid 1px #7f9036; }
+    #complexity #live .group:nth-child(2) .element {
+      background-color: #a26f33;
+      border: solid 1px #a26f33; }
+    #complexity #live .group:nth-child(3) .element {
+      background-color: #5f5da5;
+      border: solid 1px #5f5da5; }
+    #complexity #live .label {
+      background: none; }
