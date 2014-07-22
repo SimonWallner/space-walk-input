@@ -19,6 +19,7 @@ var colors = {
 var windowSize = 1; // seconds
 
 var storedData = {};
+var externalClock = 0; // time reference from the streaming data, not precise!
 
 var truncateData = function(arr, time) {
 	// remove all entries from the data array that are older than time
@@ -43,6 +44,28 @@ var wasActive = function(arr) {
 	return active;
 }
 
+var truncateAll = function(time) {
+	for (var input in storedData) {
+		if (storedData.hasOwnProperty(input)) {
+			storedData[input] = truncateData(storedData[input], time - windowSize);
+		}
+	}
+}
+
+var update = function() {
+	var activeCount = 0;
+
+	for (var input in storedData) {
+		if (storedData.hasOwnProperty(input)) {
+			if (wasActive(storedData[input])) {
+				activeCount++;
+			}
+		}
+	}
+
+	$('#complexity').text(activeCount);
+}
+
 libsw.onMessage = function(data) {
 	if (data.type === 'input') {
 		var payload = data.payload;
@@ -56,17 +79,11 @@ libsw.onMessage = function(data) {
 			time: payload.time
 		})
 		
-		storedData[payload.name] = truncateData(storedData[payload.name], payload.time - 1);
+		storedData[payload.name] = truncateData(storedData[payload.name], payload.time - windowSize);
 
-		var activeCount = 0;
-		for (var input in storedData) {
-			if (storedData.hasOwnProperty(input)) {
-				if (wasActive(storedData[input])) {
-					activeCount++;
-				}
-			}
-		}
-		$('#complexity').text(activeCount);
+		externalClock = payload.time;
+		update()
+
 	}
 }
 
@@ -74,7 +91,13 @@ libsw.onMessage = function(data) {
 
 libsw.onSessionStarted = function() {}
 
-$(document).ready(function() {})
+$(document).ready(function() {
+	window.setInterval(function() {
+		externalClock += 0.1; // update interval of this loop
+		truncateAll(externalClock);
+		update();
+	}, 100);
+})
 
 // ================================= util ================================
 function round(value, decimals) {
