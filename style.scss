@@ -29,7 +29,7 @@ $backgroundColor: #eee;
 body {
 	background-color: #333;
 	font-size: 16px;
-	font-family: 'Bitter';
+	font-family: 'Dosis';
 	font-weight: 400;
 	color: #E8E8E8;
 	/* come on iOS webkit, be a good citizen! */
@@ -43,11 +43,11 @@ body {
 }
 
 h1, h2 {
-	font-size: 3.5em;
-	font-weight: 700;
-	// margin-top: 0.5em;
+	font-size: 2em;
 	margin-bottom: 0.2em;
 	color: #E8E8E8;
+	text-transform: uppercase;
+	font-weight: 200;
 }
 
 
@@ -121,6 +121,8 @@ hr {
 
 // === input complexity stuff ===
 #complexity {
+	font-family: 'Dosis';
+	font-weight: 200;
 	.labelBox {
 		.label {
 			transform: rotate(90deg);
@@ -129,6 +131,7 @@ hr {
 			margin: 0.5em;
 			margin-left: 2em;
 		}
+
 		float: left;
 		background-color: $grey;
 		border-radius: 0.5em;
@@ -138,23 +141,50 @@ hr {
 	.data {
 		margin-left: 50px;
 	}
+
+	.group {
+		&:nth-child(2) {
+			.element {
+				background-color: $orange;
+			}
+		}
+		&:nth-child(3) {
+			.element {
+				background-color: $lavender;
+			}
+		}
+	}
 	.element {
-		width: 400px;
-		height: 2em;
+		width: 600px;
+		height: 1.5em;
+		font-weight: 400;
+		text-align: right;
+		padding-top: 0.4em;
+		padding-right: 0.4em;
 		background-color: $lime;
 		border-radius: 0.5em;
 		margin: 2px;
+		overflow: none;
 	}
+	
 	#history {
-		width: 600px;
 		float: left;
 	}
+
+	.divider {
+		height: 300px;
+		// width: 10px;
+		border-left: dashed 2px $grey;
+		margin-left: 2px;
+		float: left;
+	}
+
 	#live {
 		.element {
 			width: 200px;
-			background-color: $lime * 0.6;
+			opacity: 0.6;
 		}
-		margin-left: 410px;
+		margin-left: 615px;
 	}
 
 }
