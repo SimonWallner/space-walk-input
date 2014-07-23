@@ -151,7 +151,8 @@ hr {
   #complexity #live {
     margin-left: 613px; }
     #complexity #live .element {
-      width: 200px; }
+      width: 200px;
+      overflow: visible; }
     #complexity #live .group:nth-child(1) .element {
       background-color: #7f9036;
       border: solid 1px #7f9036; }

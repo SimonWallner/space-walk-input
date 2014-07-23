@@ -26,25 +26,44 @@ var colors = {
 	red: '#e25454'
 }
 
-var windowSize = 1; // seconds
+var windowSize = [1, 2, 3]; // seconds
 var deadZone = 0.3;
+var updateInterval = 100; // ms
+var maxComplexity = 10;
 
 var storedData = {};
 var externalClock = 0; // time reference from the streaming data, not precise!
 
-var truncateData = function(arr, time) {
-	// remove all entries from the data array that are older than time
-	
-	// time is monotonous, find last index that fails the test
-	var i = 0;
-	for (; i < arr.length; i++) {
-		if (arr[i].time > time) { // found first valid element
-			break;
+
+var findFirstIndex = function(arr, predicate) {
+	for (var i = 0; i < arr.length; i++) {
+		if (predicate(arr[i])) {
+			return i;
 		}
 	}
 
-	arr = arr.splice(i); // might be off by one...
+	return undefined;
+}
+
+// remove all entries from the data array 'arr' that are older than 'time'
+var truncateData = function(arr, time) {
+	
+	var i = findFirstIndex(arr, function(element) {
+		return (element.time > time);
+	})
+
+	arr = arr.splice(i);
 	return arr;
+}
+
+// truncate all data using the largest window size.
+// i.e. last(windowSize)
+var truncateAll = function(time) {
+	for (var input in storedData) {
+		if (storedData.hasOwnProperty(input)) {
+			storedData[input] = truncateData(storedData[input], time - last(windowSize));
+		}
+	}
 }
 
 var wasActive = function(arr) {
@@ -55,26 +74,40 @@ var wasActive = function(arr) {
 	return active;
 }
 
-var truncateAll = function(time) {
-	for (var input in storedData) {
-		if (storedData.hasOwnProperty(input)) {
-			storedData[input] = truncateData(storedData[input], time - windowSize);
-		}
-	}
-}
+var update = function(time) {
 
-var update = function() {
-	var activeCount = 0;
+	var activeCount = [0, 0, 0];
 
 	for (var input in storedData) {
 		if (storedData.hasOwnProperty(input)) {
-			if (wasActive(storedData[input])) {
-				activeCount++;
+			
+			for (var i = 0; i < windowSize.length; i++) {
+				var index = findFirstIndex(storedData[input], function(element) {
+					return (element.time > (time - windowSize[i]));
+				});
+
+				 if (index != undefined) {
+					if (wasActive(storedData[input].slice(index))) {
+						activeCount[i]++;
+					}	
+				}
 			}
 		}
 	}
 
-	$('#complexity').text(activeCount);
+	// update max complexity first to avoid any kind of lag/weirdness in the display
+	for (var i = 0; i < windowSize.length; i++) {
+		maxComplexity = Math.max(maxComplexity, activeCount[i]);	
+	}
+
+	for (var i = 0; i < windowSize.length; i++) {
+		maxComplexity = Math.max(maxComplexity, activeCount[i]);	
+		$('#live-box span').eq(i).text(activeCount);
+		$('#live-box div.element').eq(i).width(200 * (activeCount[i]/maxComplexity));
+	}
+	
+
+	
 }
 
 libsw.onMessage = function(data) {
@@ -90,11 +123,9 @@ libsw.onMessage = function(data) {
 			time: payload.time
 		})
 		
-		storedData[payload.name] = truncateData(storedData[payload.name], payload.time - windowSize);
+		// storedData[payload.name] = truncateData(storedData[payload.name], payload.time - windowSize);
 
 		externalClock = payload.time;
-		update()
-
 	}
 }
 
@@ -104,10 +135,10 @@ libsw.onSessionStarted = function() {}
 
 $(document).ready(function() {
 	window.setInterval(function() {
-		externalClock += 0.1; // update interval of this loop
+		externalClock += updateInterval / 1000; // convert to seconds
 		truncateAll(externalClock);
-		update();
-	}, 100);
+		update(externalClock);
+	}, updateInterval);
 })
 
 // ================================= util ================================
