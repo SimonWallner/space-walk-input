@@ -165,7 +165,7 @@ hr {
 			width: 300px;
 			padding: 0.5em;
 			padding-top: 0.2em;
-			background: linear-gradient(to right, rgba(1, 0, 0, 0.65) 0%, rgba(1, 0, 0, 0) 100%);
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
 		}
 	}
 	.bit {
@@ -232,21 +232,21 @@ hr {
 		.group {
 			&:nth-child(1) {
 				.element {
-					background-color: $lime * 0.7;
-					border: solid 1px $lime * 0.7;
+					background-color: $lime;
+					border: solid 1px $lime;
 				}
 			}			
 
 			&:nth-child(2) {
 				.element {
-					background-color: $orange * 0.7;
-					border: solid 1px $orange * 0.7;
+					background-color: $orange;
+					border: solid 1px $orange;
 				}
 			}
 			&:nth-child(3) {
 				.element {
-					background-color: $lavender * 0.7;
-					border: solid 1px $lavender * 0.7;
+					background-color: $lavender;
+					border: solid 1px $lavender;
 				}
 			}
 		}

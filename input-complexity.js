@@ -1,11 +1,12 @@
 // TODOs
-// - add more windows
-// - add visualisation
 // - performance???
 // - special treating of axes?
 // 		- dead zones?
 // 		- beats?
-
+// - operators
+// - different window types
+// 		binning of data, variable bin size???
+// 		multiply with weight vector
 
 
  // monkey patching
@@ -66,12 +67,33 @@ var truncateAll = function(time) {
 	}
 }
 
+var isActive = function(value) {
+	return (Math.abs(value) > deadZone);
+}
+
 var wasActive = function(arr) {
 	var active = arr.reduce(function(accumulator, current) {
-		return accumulator || (Math.abs(current.value) > deadZone);
+		return accumulator || isActive(current.value);
 	}, false)
 
 	return active;
+}
+
+// find the bin index within the boundaries 'lower' and 'higher'
+// the result is bounded in [0, numbins - 1]
+var findBinIndex = function(value, lower, higher, numBins) {
+	var index = Math.floor(((value - lower) / (higher - lower)) * numBins);
+	return Math.max(0, Math.min(numBins - 1, index));
+}
+
+var wasActiveBinned = function(arr, startTime, endTime, numBins) {
+	result = [];
+	for (var i = 0; i < arr.length; i++) {
+		var binIndex = findBinIndex(arr[i].time, startTime, endTime, numBins);
+		result[binIndex] = result[binIndex] || isActive(arr[i].value);
+	}
+
+	return result;
 }
 
 var update = function(time) {
@@ -142,6 +164,19 @@ $(document).ready(function() {
 })
 
 // ================================= util ================================
+
+// create a linear space of size 'size' spanning [a, b]
+// the first element is a, the last is b
+function linspace(a, b, size) {
+	var result = [];
+	for (var i = 0; i < size; i++) {
+		var t = i / (size - 1);
+		result[i] = (a * (1 - t) + b * t);
+	}
+
+	return result;
+}
+
 function round(value, decimals) {
 	decimals = decimals || 0;
 	var v = value * Math.pow(10, decimals);

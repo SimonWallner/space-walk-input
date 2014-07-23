@@ -118,7 +118,7 @@ hr {
       width: 300px;
       padding: 0.5em;
       padding-top: 0.2em;
-      background: linear-gradient(to right, rgba(1, 0, 0, 0.65) 0%, rgba(1, 0, 0, 0) 100%); }
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, transparent 100%); }
   #complexity .bit {
     width: 1em;
     height: 2em;
@@ -154,13 +154,13 @@ hr {
       width: 200px;
       overflow: visible; }
     #complexity #live .group:nth-child(1) .element {
-      background-color: #7f9036;
-      border: solid 1px #7f9036; }
+      background-color: #b6ce4e;
+      border: solid 1px #b6ce4e; }
     #complexity #live .group:nth-child(2) .element {
-      background-color: #a26f33;
-      border: solid 1px #a26f33; }
+      background-color: #e89f49;
+      border: solid 1px #e89f49; }
     #complexity #live .group:nth-child(3) .element {
-      background-color: #5f5da5;
-      border: solid 1px #5f5da5; }
+      background-color: #8885ed;
+      border: solid 1px #8885ed; }
     #complexity #live .label {
       background: none; }
