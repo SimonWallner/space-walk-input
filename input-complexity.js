@@ -7,6 +7,7 @@
 // - different window types
 // 		binning of data, variable bin size???
 // 		multiply with weight vector
+// - plotting of history data...
 
 
  // monkey patching
@@ -31,6 +32,7 @@ var windowSize = [1, 2, 3]; // seconds
 var deadZone = 0.3;
 var updateInterval = 100; // ms
 var maxComplexity = 10;
+var ramp = linspace(0, 1, 10);
 
 var storedData = {};
 var externalClock = 0; // time reference from the streaming data, not precise!
@@ -86,8 +88,13 @@ var findBinIndex = function(value, lower, higher, numBins) {
 	return Math.max(0, Math.min(numBins - 1, index));
 }
 
+// startTime < endTime
 var wasActiveBinned = function(arr, startTime, endTime, numBins) {
 	result = [];
+	for (var i = 0; i < numBins; i++) {
+		result[i] = false;
+	}
+	
 	for (var i = 0; i < arr.length; i++) {
 		var binIndex = findBinIndex(arr[i].time, startTime, endTime, numBins);
 		result[binIndex] = result[binIndex] || isActive(arr[i].value);
@@ -96,9 +103,49 @@ var wasActiveBinned = function(arr, startTime, endTime, numBins) {
 	return result;
 }
 
+// reduce across the 2d array
+// i.e. NOT 
+// for each a in arr: a.reduce()
+// f is a function(previous, current)
+var reduce2D = function(arr, f, init) {
+
+	if (arr.length === 0) {
+		return [];
+	}
+
+	result = [];
+	// init
+	for (var j = 0; j < arr[0].length; j++) {
+		result[j] = init;
+	}
+
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = 0; j < arr[i].length; j++) {
+			result[j] = f(result[j], arr[i][j])
+		}
+	}
+
+	return result;
+}
+
+var weightedAverage = function(values, weights) {
+	var sum = values.reduce(function(prev, current, index) {
+		return prev + (current * weights[index]);
+	}, 0)
+
+	var weightsSum = weights.reduce(function(prev, current) {
+		return prev + current;
+	}, 0);
+
+	var average = sum / weightsSum;
+	return average;
+}
+
 var update = function(time) {
 
 	var activeCount = [0, 0, 0];
+	var activityBins = [[] ,[], []];
+	var binned = [];
 
 	for (var input in storedData) {
 		if (storedData.hasOwnProperty(input)) {
@@ -108,28 +155,47 @@ var update = function(time) {
 					return (element.time > (time - windowSize[i]));
 				});
 
-				 if (index != undefined) {
-					if (wasActive(storedData[input].slice(index))) {
+				if (index != undefined) {
+					var subset = storedData[input].slice(index);
+					if (wasActive(subset)) {
 						activeCount[i]++;
-					}	
+					}
+					activityBins[i].push(wasActiveBinned(subset, time - windowSize[i], time, 10))
 				}
 			}
 		}
 	}
 
+
+
 	// update max complexity first to avoid any kind of lag/weirdness in the display
 	for (var i = 0; i < windowSize.length; i++) {
-		maxComplexity = Math.max(maxComplexity, activeCount[i]);	
+		maxComplexity = Math.max(maxComplexity, activeCount[i]);
 	}
 
 	for (var i = 0; i < windowSize.length; i++) {
-		maxComplexity = Math.max(maxComplexity, activeCount[i]);	
-		$('#live-box span').eq(i).text(activeCount);
+		$('#live-box span').eq(i).text(activeCount[i]);
 		$('#live-box div.element').eq(i).width(200 * (activeCount[i]/maxComplexity));
-	}
-	
 
-	
+
+		var binned = reduce2D(activityBins[i], function(previous, current) {
+			if (current) {
+				return previous + 1;
+			} else {
+				return previous
+			}
+			return (previous + current);
+		}, 0);
+
+		var average = weightedAverage(binned, ramp);
+
+		var scalar = binned.reduce(function(prev, current) {
+			return Math.max(prev, current);
+		}, 0);
+
+		$('#live-saw span').eq(i).text(scalar);
+		$('#live-saw div.element').eq(i).width(200 * (scalar/maxComplexity));
+	}
 }
 
 libsw.onMessage = function(data) {
