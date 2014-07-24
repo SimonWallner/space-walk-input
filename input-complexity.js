@@ -94,7 +94,7 @@ var wasActiveBinned = function(arr, startTime, endTime, numBins) {
 	for (var i = 0; i < numBins; i++) {
 		result[i] = false;
 	}
-	
+
 	for (var i = 0; i < arr.length; i++) {
 		var binIndex = findBinIndex(arr[i].time, startTime, endTime, numBins);
 		result[binIndex] = result[binIndex] || isActive(arr[i].value);
@@ -193,8 +193,8 @@ var update = function(time) {
 			return Math.max(prev, current);
 		}, 0);
 
-		$('#live-saw span').eq(i).text(scalar);
-		$('#live-saw div.element').eq(i).width(200 * (scalar/maxComplexity));
+		$('#live-saw span').eq(i).text(average.toFixed(2));
+		$('#live-saw div.element').eq(i).width(200 * (average/maxComplexity));
 	}
 }
 
