@@ -169,16 +169,18 @@ hr {
 		}
 	}
 	.bit {
-		width: 1em;
-		height: 2em;
-		border-top-left-radius: 0.2em;
-		border-top-right-radius: 0.2em;
-		border-bottom-left-radius: 0px;
-		border-bottom-right-radius: 0px;
+		width: 3px;
+		height: 1.4em;
 		background-color: $orange;
 		display: inline-block;
 		// float: left;
-		margin-right: -1px;
+		margin-right: 2px;
+		transform-origin: bottom left;
+
+		// &:nth-child(3n) {
+			
+		// 	transform: scale(1, 0.5);
+		// }
 	}
 	
 	

@@ -36,6 +36,11 @@ var ramp = linspace(0, 1, 10);
 
 var storedData = {};
 var externalClock = 0; // time reference from the streaming data, not precise!
+var historyData = {
+	maxSize: 100, // some magic value
+	box: [[], [], []],
+	saw: [[], [], []]
+};
 
 
 var findFirstIndex = function(arr, predicate) {
@@ -174,6 +179,7 @@ var update = function(time) {
 	}
 
 	for (var i = 0; i < windowSize.length; i++) {
+		historyData.box[i].push(activeCount[i]);
 		$('#live-box span').eq(i).text(activeCount[i]);
 		$('#live-box div.element').eq(i).width(200 * (activeCount[i]/maxComplexity));
 
@@ -193,8 +199,28 @@ var update = function(time) {
 			return Math.max(prev, current);
 		}, 0);
 
+		historyData.saw[i].push(average);
 		$('#live-saw span').eq(i).text(average.toFixed(2));
 		$('#live-saw div.element').eq(i).width(200 * (average/maxComplexity));
+	}
+}
+
+var updateHistory = function() {
+	for (var i = 0; i < historyData.box.length; i++) {
+		var bits = d3.select('#bits-box-' + i).selectAll('.bit').data(historyData.box[i]);
+		bits.enter()
+			.append('div')
+				.attr('class', 'bit')
+		bits
+			.style('transform', function(d) {return 'scale(1, ' + Math.max(0.05, (d / maxComplexity)) + ')';});
+	}
+}
+
+var truncateHistory = function() {
+	for (var i = 0; i < historyData.box.length; i++) {
+		if (historyData.box[i].length > historyData.maxSize) {
+			historyData.box[i] = historyData.box[i].slice(historyData.box[i].length - historyData.maxSize);
+		}
 	}
 }
 
@@ -210,8 +236,6 @@ libsw.onMessage = function(data) {
 			value: payload.value,
 			time: payload.time
 		})
-		
-		// storedData[payload.name] = truncateData(storedData[payload.name], payload.time - windowSize);
 
 		externalClock = payload.time;
 	}
@@ -226,6 +250,8 @@ $(document).ready(function() {
 		externalClock += updateInterval / 1000; // convert to seconds
 		truncateAll(externalClock);
 		update(externalClock);
+		truncateHistory();
+		updateHistory();
 	}, updateInterval);
 })
 
