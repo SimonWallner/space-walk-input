@@ -4,10 +4,7 @@
 // 		- dead zones?
 // 		- beats?
 // - operators
-// - different window types
-// 		binning of data, variable bin size???
-// 		multiply with weight vector
-// - plotting of history data...
+
 
 
  // monkey patching
@@ -28,12 +25,13 @@ var colors = {
 	red: '#e25454'
 }
 
-var windowSize = [1, 5, 10]; // seconds
+var windowSize = [3, 5, 10]; // seconds
 var deadZone = 0.3;
-var updateInterval = 100; // ms
-var maxComplexity = 10;
+var minUpdateInterval = 0.1; // seconds
+var maxComplexity = 10; //  just a magic value to start with
 
 var storedData = {};
+var currentState = {};
 var externalClock = 0; // time reference from the streaming data, not precise!
 var historyData = {
 	maxSize: 120, // some magic value, fit it to the width of the encapsulating div
@@ -42,6 +40,21 @@ var historyData = {
 	saw: [[], [], []],
 	gaussian: [[], [], []]
 };
+
+// in seconds
+var Timer = function() {
+	var that = this;
+
+	this.lastT = performance.now() / 1000;
+	this.deltaT = 0;
+
+	this.tick = function() {
+		var currentT = performance.now() / 1000;
+		this.deltaT = currentT - this.lastT;
+		this.lastT = currentT;
+	};
+};
+var timer = new Timer();
 
 
 var findFirstIndex = function(arr, predicate) {
@@ -279,31 +292,54 @@ libsw.onMessage = function(data) {
 	if (data.type === 'input') {
 		var payload = data.payload;
 
-		if (!storedData[payload.name]) {
-			storedData[payload.name] = [];
+		currentState[payload.name] = {
+			value: payload.value,
+			// time: payload.time
 		}
 
-		storedData[payload.name].push({
-			value: payload.value,
-			time: payload.time
-		})
-
 		externalClock = payload.time;
+		pushDataFrame();
 	}
 }
 
+var pushDataFrame = function() {
+	for (var prop in currentState) {
+		if (currentState.hasOwnProperty(prop)) {
+			var element = currentState[prop];
 
+			if (!storedData[prop]) {
+				storedData[prop] = [];
+			}
+
+			storedData[prop].push({
+				value: currentState[prop].value,
+				time: externalClock
+			})
+		}
+	}
+}
 
 libsw.onSessionStarted = function() {}
 
 $(document).ready(function() {
-	window.setInterval(function() {
-		externalClock += updateInterval / 1000; // convert to seconds
-		truncateAll(externalClock);
-		update(externalClock);
-		truncateHistory();
-		updateHistory();
-	}, updateInterval);
+	timer.tick();
+	var lastFrameT = timer.lastT;
+
+	window.requestAnimationFrame(function recurse() {
+		timer.tick();
+		if (timer.lastT > (lastFrameT + minUpdateInterval)) {
+			externalClock += (timer.lastT - lastFrameT);
+			lastFrameT = timer.lastT;
+
+			pushDataFrame();
+			truncateAll(externalClock);
+			update(externalClock);
+			truncateHistory();
+			updateHistory();
+		}
+
+		window.requestAnimationFrame(recurse);
+	});
 })
 
 // ================================= util ================================
