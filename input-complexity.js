@@ -28,18 +28,19 @@ var colors = {
 	red: '#e25454'
 }
 
-var windowSize = [1, 2, 3]; // seconds
+var windowSize = [1, 5, 10]; // seconds
 var deadZone = 0.3;
 var updateInterval = 100; // ms
 var maxComplexity = 10;
-var ramp = linspace(0, 1, 10);
 
 var storedData = {};
 var externalClock = 0; // time reference from the streaming data, not precise!
 var historyData = {
-	maxSize: 100, // some magic value
+	maxSize: 120, // some magic value, fit it to the width of the encapsulating div
+	binWidth: 0.5, // seconds, everything inside a bin is regarded as 'simultaneus'
 	box: [[], [], []],
-	saw: [[], [], []]
+	saw: [[], [], []],
+	gaussian: [[], [], []]
 };
 
 
@@ -94,6 +95,9 @@ var findBinIndex = function(value, lower, higher, numBins) {
 }
 
 // startTime < endTime
+// find out if there was activity during start and end time segmented into
+// numBins.
+// returns a logical array of numBins length
 var wasActiveBinned = function(arr, startTime, endTime, numBins) {
 	result = [];
 	for (var i = 0; i < numBins; i++) {
@@ -133,7 +137,15 @@ var reduce2D = function(arr, f, init) {
 	return result;
 }
 
+// compute weighted average
+// weights are not assumed to be normalised
+// values.length must be === weights.length
+// 0 is returned if values === []
 var weightedAverage = function(values, weights) {
+	if (values.length === 0) {
+		return 0;
+	}
+
 	var sum = values.reduce(function(prev, current, index) {
 		return prev + (current * weights[index]);
 	}, 0)
@@ -165,7 +177,8 @@ var update = function(time) {
 					if (wasActive(subset)) {
 						activeCount[i]++;
 					}
-					activityBins[i].push(wasActiveBinned(subset, time - windowSize[i], time, 10))
+					var numBins = Math.ceil(windowSize[i] / historyData.binWidth);
+					activityBins[i].push(wasActiveBinned(subset, time - windowSize[i], time, numBins))
 				}
 			}
 		}
@@ -179,11 +192,12 @@ var update = function(time) {
 	}
 
 	for (var i = 0; i < windowSize.length; i++) {
+		// box data
 		historyData.box[i].push(activeCount[i]);
 		$('#live-box span').eq(i).text(activeCount[i]);
 		$('#live-box div.element').eq(i).width(200 * (activeCount[i]/maxComplexity));
 
-
+		// saw and gaussian data
 		var binned = reduce2D(activityBins[i], function(previous, current) {
 			if (current) {
 				return previous + 1;
@@ -193,15 +207,22 @@ var update = function(time) {
 			return (previous + current);
 		}, 0);
 
-		var average = weightedAverage(binned, ramp);
+		var sawRamp = linspace(0, 1, binned.length);
+		var sawAverage = weightedAverage(binned, sawRamp);
 
-		var scalar = binned.reduce(function(prev, current) {
-			return Math.max(prev, current);
-		}, 0);
+		var gaussianWeights = leftGaussian(binned.length);
+		var gaussianAverage = weightedAverage(binned, gaussianWeights);
 
-		historyData.saw[i].push(average);
-		$('#live-saw span').eq(i).text(average.toFixed(2));
-		$('#live-saw div.element').eq(i).width(200 * (average/maxComplexity));
+
+		// plotting saw
+		historyData.saw[i].push(sawAverage);
+		$('#live-saw span').eq(i).text(sawAverage.toFixed(2));
+		$('#live-saw div.element').eq(i).width(200 * (sawAverage/maxComplexity));
+
+		// plotting gaussian
+		historyData.gaussian[i].push(gaussianAverage);
+		$('#live-gaussian span').eq(i).text(gaussianAverage.toFixed(2));
+		$('#live-gaussian div.element').eq(i).width(200 * (gaussianAverage/maxComplexity));
 	}
 }
 
@@ -214,12 +235,42 @@ var updateHistory = function() {
 		bits
 			.style('transform', function(d) {return 'scale(1, ' + Math.max(0.05, (d / maxComplexity)) + ')';});
 	}
+
+	for (var i = 0; i < historyData.saw.length; i++) {
+		var bits = d3.select('#bits-saw-' + i).selectAll('.bit').data(historyData.saw[i]);
+		bits.enter()
+			.append('div')
+				.attr('class', 'bit')
+		bits
+			.style('transform', function(d) {return 'scale(1, ' + Math.max(0.05, (d / maxComplexity)) + ')';});
+	}
+
+	for (var i = 0; i < historyData.gaussian.length; i++) {
+		var bits = d3.select('#bits-gaussian-' + i).selectAll('.bit').data(historyData.gaussian[i]);
+		bits.enter()
+			.append('div')
+				.attr('class', 'bit')
+		bits
+			.style('transform', function(d) {return 'scale(1, ' + Math.max(0.05, (d / maxComplexity)) + ')';});
+	}
 }
 
 var truncateHistory = function() {
 	for (var i = 0; i < historyData.box.length; i++) {
 		if (historyData.box[i].length > historyData.maxSize) {
 			historyData.box[i] = historyData.box[i].slice(historyData.box[i].length - historyData.maxSize);
+		}
+	}
+
+	for (var i = 0; i < historyData.saw.length; i++) {
+		if (historyData.saw[i].length > historyData.maxSize) {
+			historyData.saw[i] = historyData.saw[i].slice(historyData.saw[i].length - historyData.maxSize);
+		}
+	}
+
+	for (var i = 0; i < historyData.gaussian.length; i++) {
+		if (historyData.gaussian[i].length > historyData.maxSize) {
+			historyData.gaussian[i] = historyData.gaussian[i].slice(historyData.gaussian[i].length - historyData.maxSize);
 		}
 	}
 }
@@ -267,6 +318,17 @@ function linspace(a, b, size) {
 	}
 
 	return result;
+}
+
+// half sided gaussian bell curve, with 0 at [0] and the max at [size-1]
+function leftGaussian(size) {
+	var ls = linspace(0, 1, size);
+	var sigma = 1/3; // going to 6 sigma width
+	var gaussian = ls.map(function(x) {
+		return Math.exp(-0.5 * Math.pow(x / sigma, 2));
+	});
+
+	return gaussian.reverse();
 }
 
 function round(value, decimals) {
