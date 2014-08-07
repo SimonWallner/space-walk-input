@@ -5,7 +5,8 @@
 
 var libsw = new LibSpaceWalk();
 
-var storedValues = {};
+var storedData = {};
+var dirty = false;
 
 var colors = {
 	orange: '#e89f49',
@@ -97,59 +98,63 @@ var sticks = {
 	}
 }
 
+var update = function() {
+	if (dirty === false) {
+		return;
+	}
+	dirty = false;
+
+	// for obvious reasons (name spaces and such) there is no way to 
+	// directly access things iside the external svg
+	var svg = d3.select(document.getElementById('controller-svg').contentDocument);
+
+	for (var input in storedData) {
+		if (storedData.hasOwnProperty(input)) {
+			var payload = storedData[input];
+
+	 		if (payload.type === 'digital') { // aka button press/release
+
+				var mapping = currentMapping.digital[payload.name];
+				if (mapping) {
+
+					var path = svg.selectAll('#' + mapping + ' path');
+					
+					if (payload.value === 0) {
+						path.style('fill', '')
+							.style('opacity', 1); // workaround for LR2
+					} else {
+						path.style('fill', colors.red)
+							.style('opacity', 1); // workaround for LR2
+					}
+				}
+			} else if (payload.type === 'analog') { // aka axis
+				var mapping = currentMapping.analog[payload.name]
+				if (mapping) {
+					if (mapping.id === 'LS' || mapping.id === 'RS') {
+						sticks[mapping.id][mapping.property] = payload.value;
+
+						var x = map(-1, 1, -15, 15, sticks[mapping.id].x);
+						var y = map(-1, 1, -15, 15, sticks[mapping.id].y);
+
+						svg.select('#' + mapping.id)
+							.attr('transform', 'translate(' + x + ', ' + y + ')');
+					} else if(mapping.id === 'L2' || mapping.id === 'R2') {
+
+						svg.selectAll('#' + mapping.id + ' path')
+							.style('fill', colors.red)
+							.style('opacity', payload.value);
+					}
+				}
+			}
+		}
+	}
+}
 
 libsw.onMessage = function(data) {
 	if (data.type === 'input') {
 		var payload = data.payload;
-		
-		// for obvious reasons (name spaces and such) there is no way to 
-		// directly access things iside the external svg
-		var svg = d3.select(document.getElementById('controller-svg').contentDocument);
-
-		if (payload.type === 'digital') { // aka button press/release
-
-			var mapping = currentMapping.digital[payload.name];
-			if (mapping) {
-
-				if (storedValues[payload.name]) {
-					// on --> off transition
-					if (storedValues[payload.name].value === 1 && payload.value === 0) {
-						svg.selectAll('#' + mapping + ' path')
-							.style('fill', '')
-							.style('opacity', 1); // workaround for LR2
-					}
-
-					// off --> on transition
-					if (storedValues[payload.name].value === 0 && payload.value === 1) {
-						svg.selectAll('#' + mapping + ' path')
-							.style('fill', colors.red)
-							.style('opacity', 1); // workaround for LR2
-					}
-				}
-			}
-
-
-			// store value
-			storedValues[payload.name] = payload;
-		} else if (payload.type === 'analog') { // aka axis
-			var mapping = currentMapping.analog[payload.name]
-			if (mapping) {
-				if (mapping.id === 'LS' || mapping.id === 'RS') {
-					sticks[mapping.id][mapping.property] = payload.value;
-
-					var x = map(-1, 1, -15, 15, sticks[mapping.id].x);
-					var y = map(-1, 1, -15, 15, sticks[mapping.id].y);
-
-					svg.select('#' + mapping.id)
-						.attr('transform', 'translate(' + x + ', ' + y + ')');
-				} else if(mapping.id === 'L2' || mapping.id === 'R2') {
-
-					svg.selectAll('#' + mapping.id + ' path')
-						.style('fill', colors.red)
-						.style('opacity', payload.value);
-				}
-			}
-		}
+		storedData[payload.name] = payload;
+		dirty = true;
 	}
 }
 
@@ -171,6 +176,10 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		$('#mapping-xbox').removeClass('active');
 	})
+
+	window.setInterval(function() {
+		update();
+	}, 10);
 })
 
 // ================================= util ================================

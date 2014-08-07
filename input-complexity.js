@@ -25,7 +25,7 @@ var colors = {
 	red: '#e25454'
 }
 
-var windowSize = [3, 5, 10]; // seconds
+var windowSize = [1, 5, 10]; // seconds
 var deadZone = 0.3;
 var minUpdateInterval = 0.1; // seconds
 var maxComplexity = 10; //  just a magic value to start with
