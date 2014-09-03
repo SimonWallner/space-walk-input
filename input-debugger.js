@@ -20,7 +20,7 @@ var colors = {
 
 
 libsw.onMessage = function(data) {
-	if (data.type === 'input') {
+	if (data.type === 'ext.input.gamePad.sample') {
 		var payload = data.payload;
 		if (payload.type === 'digital') { // aka button press/release
 

@@ -151,7 +151,7 @@ var update = function() {
 }
 
 libsw.onMessage = function(data) {
-	if (data.type === 'input') {
+	if (data.type === 'ext.input.gamePad.sample') {
 		var payload = data.payload;
 		storedData[payload.name] = payload;
 		dirty = true;
