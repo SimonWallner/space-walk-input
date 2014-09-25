@@ -5,6 +5,9 @@
 
 var libsw = new LibSpaceWalk();
 
+var activeController = 0;
+var knownControllers = [0];
+
 var storedData = {};
 var dirty = false;
 
@@ -152,9 +155,17 @@ var update = function() {
 
 libsw.onMessage = function(data) {
 	if (data.type === 'ext.input.gamePad.sample') {
-		var payload = data.payload;
-		storedData[payload.name] = payload;
-		dirty = true;
+		if (data.payload.controllerNumber === activeController) {
+			var payload = data.payload;
+			storedData[payload.name] = payload;
+			dirty = true;
+		} else {
+			if (knownControllers.indexOf(data.payload.controllerNumber) === -1) {
+				knownControllers.push(data.payload.controllerNumber);
+
+				drawControllerSelect();
+			}
+		}
 	}
 }
 
@@ -180,7 +191,26 @@ $(document).ready(function() {
 	window.setInterval(function() {
 		update();
 	}, 10);
-})
+
+	drawControllerSelect();
+});
+
+var drawControllerSelect = function() {
+	var divs = d3.select('#controllerSelect').selectAll('div').data(knownControllers);
+	divs.enter()
+		.append('div')
+			.text(function(d) { return d; })
+			.attr('id', function(d) { return 'controller' + d; })
+			.on('click', function(d) {
+				activeController = d;
+				drawControllerSelect();
+			})
+
+	divs.text(function(d) { return d; })
+		.attr('class', '');
+
+	$('#controller' + activeController).addClass('active');
+}
 
 // ================================= util ================================
 function round(value, decimals) {
