@@ -85,10 +85,42 @@ var mapping = {
 			'axis-2': {id: 'RS', property: 'x'},
 			'axis-3': {id: 'RS', property: 'y'},
 		}
+	},
+    unityXbox360: {
+		digital: {
+			'button-16': 'cross',
+			'button-17': 'circle',
+			'button-18': 'square',
+			'button-19': 'triangle',
+
+			'button-13': 'L1',
+			'button-14': 'R1',
+			'button-11': 'L3',
+			'button-12': 'R3',
+
+			'button-5': 'Dpad-up',
+			'button-6': 'Dpad-down',
+			'button-7': 'Dpad-left',
+			'button-8': 'Dpad-right',
+
+			'button-9': 'start',
+			'button-10': 'select',
+			'button-15': 'special'
+		},
+		analog: {
+            'axis-0': {id: 'LS', property: 'x'},
+			'axis-1': {id: 'LS', property: 'y'},
+
+			'axis-2': {id: 'RS', property: 'x'},
+			'axis-3': {id: 'RS', property: 'y'},
+
+			'axis-4': {id: 'L2'},
+			'axis-5': {id: 'R2'}
+		}
 	}
 }
 
-currentMapping = mapping.xbox360;
+currentMapping = mapping.unityXbox360;
 
 var sticks = {
 	LS: {
@@ -107,7 +139,7 @@ var update = function() {
 	}
 	dirty = false;
 
-	// for obvious reasons (name spaces and such) there is no way to 
+	// for obvious reasons (name spaces and such) there is no way to
 	// directly access things iside the external svg
 	var svg = d3.select(document.getElementById('controller-svg').contentDocument);
 
@@ -121,7 +153,7 @@ var update = function() {
 				if (mapping) {
 
 					var path = svg.selectAll('#' + mapping + ' path');
-					
+
 					if (payload.value === 0) {
 						path.style('fill', '')
 							.style('opacity', 1); // workaround for LR2
@@ -155,13 +187,14 @@ var update = function() {
 
 libsw.onMessage = function(data) {
 	if (data.type === 'ext.input.gamePad.sample') {
-		if (data.payload.controllerNumber === activeController) {
+        var controllerNumber = parseInt(data.payload.controllerNumber);
+		if (controllerNumber === activeController) {
 			var payload = data.payload;
 			storedData[payload.name] = payload;
 			dirty = true;
 		} else {
-			if (knownControllers.indexOf(data.payload.controllerNumber) === -1) {
-				knownControllers.push(data.payload.controllerNumber);
+			if (knownControllers.indexOf(controllerNumber) === -1) {
+				knownControllers.push(controllerNumber);
 
 				drawControllerSelect();
 			}
@@ -179,6 +212,7 @@ $(document).ready(function() {
 
 		$(this).addClass('active');
 		$('#mapping-ps3').removeClass('active');
+        $('#mapping-unity-xbox').removeClass('active');
 	})
 
 	$('#mapping-ps3').click(function() {
@@ -186,6 +220,15 @@ $(document).ready(function() {
 
 		$(this).addClass('active');
 		$('#mapping-xbox').removeClass('active');
+        $('#mapping-unity-xbox').removeClass('active');
+	})
+
+    $('#mapping-unity-xbox').click(function() {
+		currentMapping = mapping.xbox360;
+
+		$(this).addClass('active');
+		$('#mapping-ps3').removeClass('active');
+        $('#mapping-xbox').removeClass('active');
 	})
 
 	window.setInterval(function() {
