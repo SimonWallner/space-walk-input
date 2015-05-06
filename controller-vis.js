@@ -48,8 +48,8 @@ var mapping = {
 			'axis-0': {id: 'LS', property: 'x'},
 			'axis-1': {id: 'LS', property: 'y'},
 
-			'axis-3': {id: 'RS', property: 'x'},
-			'axis-4': {id: 'RS', property: 'y'},
+			'axis-2': {id: 'RS', property: 'x'},
+			'axis-3': {id: 'RS', property: 'y'},
 
 			'axis-4': {id: 'L2'},
 			'axis-5': {id: 'R2'}
