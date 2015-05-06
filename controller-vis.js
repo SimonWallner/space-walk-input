@@ -88,7 +88,7 @@ var mapping = {
 	}
 }
 
-currentMapping = mapping.unityXbox360;
+currentMapping = mapping.xbox360;
 
 var sticks = {
 	LS: {
