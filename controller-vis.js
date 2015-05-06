@@ -108,11 +108,11 @@ var mapping = {
         'unassigned': 'special'
       },
       analog: {
-        'axis-4': {id: 'LS', property: 'x'},
-        'axis-3': {id: 'LS', property: 'y'},
+        'axis-0': {id: 'LS', property: 'x'},
+        'axis-1': {id: 'LS', property: 'y'},
 
-        'axis-0': {id: 'RS', property: 'x'},
-        'axis-1': {id: 'RS', property: 'y'},
+        'axis-4': {id: 'RS', property: 'x'},
+        'axis-3': {id: 'RS', property: 'y'},
 
         // 'axis-2': {id: 'L2'}, L2 and R2 are botched together to form a single axis...
         'axis-2': {id: 'R2'}
