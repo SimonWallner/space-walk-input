@@ -85,8 +85,41 @@ var mapping = {
 			'axis-2': {id: 'RS', property: 'x'},
 			'axis-3': {id: 'RS', property: 'y'},
 		}
-	}
+	},
+    xbox360Win: {
+      digital: {
+        'button-0': 'cross',
+        'button-1': 'circle',
+        'button-2': 'square',
+        'button-3': 'triangle',
+
+        'button-4': 'L1',
+        'button-5': 'R1',
+        'button-8': 'L3',
+        'button-9': 'R3',
+
+        'button-10': 'Dpad-up',
+        'button-12': 'Dpad-down',
+        'button-13': 'Dpad-left',
+        'button-11': 'Dpad-right',
+
+        'button-7': 'start',
+        'button-6': 'select',
+        'unassigned': 'special'
+      },
+      analog: {
+        'axis-0': {id: 'LS', property: 'x'},
+        'axis-1': {id: 'LS', property: 'y'},
+
+        'axis-4': {id: 'RS', property: 'x'},
+        'axis-3': {id: 'RS', property: 'y'},
+
+        // 'axis-2': {id: 'L2'}, L2 and R2 are botched together to form a single axis...
+        'axis-2': {id: 'R2'}
+      }
+    }
 }
+
 
 currentMapping = mapping.xbox360;
 
@@ -180,6 +213,7 @@ $(document).ready(function() {
 
 		$(this).addClass('active');
 		$('#mapping-ps3').removeClass('active');
+        $('#mapping-xbox-win').removeClass('active');
 	})
 
 	$('#mapping-ps3').click(function() {
@@ -187,7 +221,16 @@ $(document).ready(function() {
 
 		$(this).addClass('active');
 		$('#mapping-xbox').removeClass('active');
+        $('#mapping-xbox-win').removeClass('active');
 	})
+
+    $('#mapping-xbox-win').click(function() {
+        currentMapping = mapping.xbox360Win;
+
+        $(this).addClass('active');
+        $('#mapping-xbox').removeClass('active');
+        $('#mapping-ps3').removeClass('active');
+    })
 
 	window.setInterval(function() {
 		update();
