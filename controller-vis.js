@@ -23,6 +23,69 @@ var colors = {
 }
 
 var mapping = {
+    rewired: {
+		digital: {
+			'button-0': 'cross',
+			'button-1': 'circle',
+			'button-2': 'square',
+			'button-3': 'triangle',
+
+			'button-4': 'L1',
+			'button-5': 'R1',
+			'button-6': 'L3',
+			'button-7': 'R3',
+
+			'button-11': 'Dpad-up',
+			'button-12': 'Dpad-down',
+			'button-13': 'Dpad-left',
+			'button-14': 'Dpad-right',
+
+			'button-8': 'start',
+			'button-9': 'select',
+			'button-10': 'special'
+		},
+		analog: {
+			'LS-x': {id: 'LS', property: 'x'},
+			'LS-y': {id: 'LS', property: 'y'},
+
+			'RS-x': {id: 'RS', property: 'x'},
+			'RS-y': {id: 'RS', property: 'y'},
+
+			'LT': {id: 'L2'},
+			'RT': {id: 'R2'}
+		}
+	},
+	ps3: {
+		digital: {
+			'button-14': 'cross',
+			'button-13': 'circle',
+			'button-15': 'square',
+			'button-12': 'triangle',
+
+			'button-10': 'L1',
+			'button-11': 'R1',
+			'button-8': 'L2',
+			'button-9': 'R2',
+			'button-1': 'L3',
+			'button-2': 'R3',
+
+			'button-4': 'Dpad-up',
+			'button-6': 'Dpad-down',
+			'button-7': 'Dpad-left',
+			'button-5': 'Dpad-right',
+
+			'button-3': 'start',
+			'button-0': 'select',
+			'button-16': 'special'
+		},
+		analog: {
+			'axis-0': {id: 'LS', property: 'x'},
+			'axis-1': {id: 'LS', property: 'y'},
+
+			'axis-2': {id: 'RS', property: 'x'},
+			'axis-3': {id: 'RS', property: 'y'},
+		}
+	},
     xbox360: {
 		digital: {
 			'button-0': 'cross',
@@ -121,7 +184,7 @@ var mapping = {
 }
 
 
-currentMapping = mapping.xbox360;
+currentMapping = mapping.rewired;
 
 var sticks = {
 	LS: {
@@ -170,7 +233,7 @@ var update = function() {
 						sticks[mapping.id][mapping.property] = payload.value;
 
 						var x = map(-1, 1, -15, 15, sticks[mapping.id].x);
-						var y = map(-1, 1, -15, 15, sticks[mapping.id].y);
+						var y = map(-1, 1, 15, -15, sticks[mapping.id].y);
 
 						svg.select('#' + mapping.id)
 							.attr('transform', 'translate(' + x + ', ' + y + ')');
@@ -208,28 +271,32 @@ libsw.onSessionStarted = function() {
 }
 
 $(document).ready(function() {
+    $('#mapping-rewired').click(function() {
+		currentMapping = mapping.rewired;
+
+		$('.button').removeClass('active');
+        $(this).addClass('active');
+	})
+
 	$('#mapping-xbox').click(function() {
 		currentMapping = mapping.xbox360;
 
-		$(this).addClass('active');
-		$('#mapping-ps3').removeClass('active');
-        $('#mapping-xbox-win').removeClass('active');
+        $('.button').removeClass('active');
+        $(this).addClass('active');
 	})
 
 	$('#mapping-ps3').click(function() {
 		currentMapping = mapping.ps3;
 
-		$(this).addClass('active');
-		$('#mapping-xbox').removeClass('active');
-        $('#mapping-xbox-win').removeClass('active');
+        $('.button').removeClass('active');
+        $(this).addClass('active');
 	})
 
     $('#mapping-xbox-win').click(function() {
         currentMapping = mapping.xbox360Win;
 
+        $('.button').removeClass('active');
         $(this).addClass('active');
-        $('#mapping-xbox').removeClass('active');
-        $('#mapping-ps3').removeClass('active');
     })
 
 	window.setInterval(function() {
