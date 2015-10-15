@@ -25,24 +25,24 @@ var colors = {
 var mapping = {
     rewired: {
 		digital: {
-			'button-0': 'cross',
-			'button-1': 'circle',
-			'button-2': 'square',
-			'button-3': 'triangle',
+			'A': 'cross',
+			'B': 'circle',
+			'X': 'square',
+			'Y': 'triangle',
 
-			'button-4': 'L1',
-			'button-5': 'R1',
-			'button-6': 'L3',
-			'button-7': 'R3',
+			'LShoulder': 'L1',
+			'RShoulder': 'R1',
+			'L3': 'L3',
+			'R3': 'R3',
 
-			'button-11': 'Dpad-up',
-			'button-12': 'Dpad-down',
-			'button-13': 'Dpad-left',
-			'button-14': 'Dpad-right',
+			'DPadUp': 'Dpad-up',
+			'DPadDown': 'Dpad-down',
+			'DPadLeft': 'Dpad-left',
+			'DPadRight': 'Dpad-right',
 
-			'button-8': 'start',
-			'button-9': 'select',
-			'button-10': 'special'
+			'Start': 'start',
+			'Back': 'select',
+			'Special': 'special'
 		},
 		analog: {
 			'LS-x': {id: 'LS', property: 'x'},
